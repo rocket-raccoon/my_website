@@ -9,6 +9,7 @@
   "author": "Alberto Tristan Benavides",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0"
   }
 }
