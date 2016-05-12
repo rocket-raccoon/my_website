@@ -10,7 +10,7 @@ app.set('port', process.env.PORT || port);
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-
+app.use(express.static(__dirname + '/public'));
 
 // Create a home page
 var pageHome = function(req, res) {
