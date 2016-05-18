@@ -1,20 +1,24 @@
 // Dependencies
+var path       = require('path');
 var express    = require('express');
-var handlebars = require('express-handlebars').create({ defaultLayout: 'main'});
+var app = express();
+app.set('views', __dirname + '/views');
+
+var hbsConfig = { layoutsDir: app.get('views') + "/layouts", defaultLayout: 'main'}
+var handlebars = require('express-handlebars')(hbsConfig);
 
 // Configure our app
-var app = express();
 var port = 3000;
 app.set('port', process.env.PORT || port);
 
-app.engine('handlebars', handlebars.engine);
+app.engine('handlebars', handlebars);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(__dirname + '/public'));
 
 // Create a home page
 var pageHome = function(req, res) {
-    res.render('home');
+	res.render('home');
 };
 app.get('/', pageHome);
 
@@ -46,7 +50,7 @@ app.use(page404);
 // Create 500 page
 var page500 = function(err, req, res, next) {
     console.error(err.stack);
-    res.status(500);
+	res.status(500);
     res.render('500');
 };
 app.use(page500);
