@@ -24,6 +24,18 @@ var pageAbout = function(req, res) {
 };
 app.get('/about', pageAbout);
 
+// Create a contact me page
+var contactPage = function(req, res) {
+    res.render('contact');
+};
+app.get('/contact', contactPage);
+
+// Create a contact me page
+var blogsPage = function(req, res) {
+    res.render('blogs');
+};
+app.get('/blogs', blogsPage);
+
 // Create 404 page
 var page404 = function(req, res) {
     res.status(404);
