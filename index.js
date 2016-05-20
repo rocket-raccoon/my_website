@@ -16,6 +16,9 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(__dirname + '/public'));
 
+// Link in Body Parser middleware
+app.use(require('body-parser').urlencoded({extended: true}));
+
 // Create a home page
 var pageHome = function(req, res) {
 	res.render('home');
@@ -32,7 +35,19 @@ app.get('/about', pageAbout);
 var contactPage = function(req, res) {
     res.render('contact');
 };
+var contactPagePost = function(req, res) {
+    var senderEmail = req.body.senderEmail;
+    var subject = req.body.subject;
+    var body = req.body.emailBody;
+    if (senderEmail && subject && body) {
+        config = {'email': senderEmail, 'subject': subject, 'body': body}
+        res.render('thank_you', config);
+    } else {
+        res.render('email_fail');
+    }
+};
 app.get('/contact', contactPage);
+app.post('/contact', contactPagePost);
 
 // Create a contact me page
 var blogsPage = function(req, res) {
