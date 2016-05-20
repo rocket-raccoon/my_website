@@ -81,11 +81,17 @@ var contactPagePost = function(req, res) {
 app.get('/contact', contactPage);
 app.post('/contact', contactPagePost);
 
-// Create a contact me page
+// Create a blogs page
 var blogsPage = function(req, res) {
     res.render('blogs');
 };
 app.get('/blogs', blogsPage);
+
+// Create a doodads page
+var doodadsPage = function(req, res) {
+    res.render('doodads');
+};
+app.get('/doodads', doodadsPage);
 
 // Create 404 page
 var page404 = function(req, res) {
