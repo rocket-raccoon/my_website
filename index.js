@@ -1,5 +1,6 @@
 // Dependencies
 var credentials = require('./credentials.js');
+var emailer     = require('./lib/emailer.js')(credentials);
 var path        = require('path');
 var express     = require('express');
 var nodemailer  = require('nodemailer');
@@ -17,18 +18,6 @@ app.engine('handlebars', handlebars);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(__dirname + '/public'));
-
-// Create our e-mail transporter
-var smtpConfig = {
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        user: credentials.gmail.user,
-        pass: credentials.gmail.password
-    }
-};
-var mailTransport = nodemailer.createTransport(smtpConfig);
 
 // Link in Body Parser middleware
 app.use(require('body-parser').urlencoded({extended: true}));
@@ -50,30 +39,12 @@ var contactPage = function(req, res) {
     res.render('contact');
 };
 var contactPagePost = function(req, res) {
-    var generate_email_text = function(email, body) {
-        text = "You received a message from: " + email;
-        text += '\n\n';
-        text += "They said: \n\n";
-        text += body;
-        return text;
-    };
     var senderEmail = req.body.senderEmail;
     var subject = req.body.subject;
     var body = req.body.emailBody;
     if (senderEmail && subject && body) {
-        emailConfig = {
-            sender: senderEmail,
-            from: senderEmail,
-            to: credentials.gmail.user,
-            subject: subject,
-            text: generate_email_text(senderEmail, body),
-        };
-        var errorHandler = function(err) {
-            if(err) console.error('Unable to send email: ' + err);
-        };        
-        mailTransport.sendMail(emailConfig, errorHandler);
-        config = {'email': senderEmail, 'subject': subject, 'body': body};
-        res.render('thank_you', config);
+        emailer.sendEmail(senderEmail, subject, body);
+        res.render('thank_you');
     } else {
         res.render('email_fail');
     }
