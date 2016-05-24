@@ -1,1 +1,19 @@
-<p>This is the page where I will put all my writings</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h1>Random Stuff I Write</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {{#each blogs}}
+    <div class="col-md-3">
+      <div class="content_square">
+        <img src="{{image}}"></img>
+        <a href="blogs/{{_id}}">{{title}}</p></a>
+      </div>
+    </div>
+    {{/each}}
+  <div>
+</div>

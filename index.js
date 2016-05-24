@@ -4,11 +4,30 @@ var emailer     = require('./lib/emailer.js')(credentials);
 var path        = require('path');
 var express     = require('express');
 var nodemailer  = require('nodemailer');
+var mongoose    = require('mongoose');
+var Blog        = require('./models/blogs.js');
 var app = express();
 app.set('views', __dirname + '/views');
 
 var hbsConfig = { layoutsDir: app.get('views') + "/layouts", defaultLayout: 'main'}
 var handlebars = require('express-handlebars')(hbsConfig);
+
+// Configure our MongoDB Connection
+var opts = {
+    server: {
+        socketOptions: { keepAlive: 1 }
+    }
+};
+switch(app.get('env')) {
+    case 'development':
+        mongoose.connect(credentials.mongo.development.connectionString, opts);
+        break;
+    case 'production':
+        mongoose.connect(credentials.mongo.production.connectionString, opts);
+        break;
+    default:
+        throw new Error('Unknown execution environment: ' + app.get('env'));
+}
 
 // Configure our app
 var port = 3000;
@@ -54,15 +73,40 @@ app.post('/contact', contactPagePost);
 
 // Create a blogs page
 var blogsPage = function(req, res) {
-    res.render('blogs');
+    Blog.find(function(err, blogs) {
+        var context = {
+            blogs: blogs,
+        };
+        res.render('blogs', context);
+    });
 };
 app.get('/blogs', blogsPage);
+
+// Create an individual blogs page
+var individualBlogPage = function(req, res) {
+    var blogId = req.params.blogId;
+    Blog.findOne({_id: blogId}, function(err, blog) {
+        var context = {
+            title: blog.title,
+            date: blog.date,
+            text: blog.text
+        };
+        res.render('single_blog', context);
+    });
+}
+app.get('/blogs/:blogId', individualBlogPage);
 
 // Create a doodads page
 var doodadsPage = function(req, res) {
     res.render('doodads');
 };
 app.get('/doodads', doodadsPage);
+
+// Create a page for the NYC picture map
+var nycPicMapPage = function(req, res) {
+    res.render("nyc_picture_map");
+};
+app.get('/nyc_picture_map', nycPicMapPage);
 
 // Create 404 page
 var page404 = function(req, res) {

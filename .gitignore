@@ -3,3 +3,5 @@ node_modules
 *.swp
 .gitignore
 credentials.js
+fixtures
+seed_blog_data.js

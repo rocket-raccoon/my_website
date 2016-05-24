@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>New York City Picture Map</h1>
+  <p>
+  This is a map of New York City courtesy of Google with pictures I've taken in various places!
+  </p>
+</div>
+
+<div class="container-fluid">
+  <div id="map"</div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHGHP0xcg7HfPAS8SDEViwEFtOVd3l2sk&sensor=false"></script>
+<script>
+    $(document).ready(function() {
+        var mapOptions = {
+            center: new google.maps.LatLng(40.7831, -73.966),
+            zoom: 12
+        };
+        var map = new new google.maps.Map(document.getElementById('map'), mapOptions);
+    });
+</script>
+
