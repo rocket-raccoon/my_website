@@ -36,7 +36,8 @@ app.set('port', process.env.PORT || port);
 app.engine('handlebars', handlebars);
 app.set('view engine', 'handlebars');
 
-app.use(express.static(__dirname + '/public'));
+var static_path = __dirname + '/public';
+app.use(express.static(static_path));
 
 // Link in Body Parser middleware
 app.use(require('body-parser').urlencoded({extended: true}));
