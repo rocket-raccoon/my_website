@@ -1,11 +1,14 @@
 // Dependencies
-var credentials = require('./credentials.js');
-var emailer     = require('./lib/emailer.js')(credentials);
-var path        = require('path');
-var express     = require('express');
-var nodemailer  = require('nodemailer');
-var mongoose    = require('mongoose');
-var Blog        = require('./models/blogs.js');
+var credentials  = require('./credentials.js');
+var emailer      = require('./lib/emailer.js')(credentials);
+var path         = require('path');
+var express      = require('express');
+var nodemailer   = require('nodemailer');
+var mongoose     = require('mongoose');
+var csurf        = require('csurf');
+var cookieParser = require('cookie-parser'); 
+
+var Blog         = require('./models/blogs.js');
 var app = express();
 app.set('views', __dirname + '/views');
 
@@ -39,8 +42,21 @@ app.set('view engine', 'handlebars');
 var static_path = __dirname + '/public';
 app.use(express.static(static_path));
 
-// Link in Body Parser middleware
+// Link in body-parser, cookie-parser, and express-sessions
 app.use(require('body-parser').urlencoded({extended: true}));
+app.use(cookieParser(credentials.cookieSecret));
+app.use(require('express-session')({
+    resave: false,
+    saveUninitialized: false,
+    secret: credentials.cookieSecret
+}));
+
+// Add CSRF protection
+app.use(csurf());
+app.use(function(req, res, next) {
+    res.locals._csrfToken = req.csrfToken();
+    next();
+});
 
 // Create a home page
 var pageHome = function(req, res) {

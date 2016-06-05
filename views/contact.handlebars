@@ -41,6 +41,7 @@ Feel free to reach out and message me through one of the channels below.  I usua
       <h1>Email Me</h1>
       <br></br>
       <form action="/contact" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrfToken}}"></input>
         <fieldset class="form-group">
           <label for="senderEmail">Your E-Mail Address</label>
           <input type="email" name="senderEmail" class="form-control" id="senderEmail" placeholder="Enter your email address">
