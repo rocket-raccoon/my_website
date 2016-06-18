@@ -12,10 +12,12 @@
   <div class="grid-sizer"></div>
   {{#each blogs}}
   <div class="grid-item">
+    <a href="blogs/{{_id}}">
     <div class="content_square">
       <img src="{{image}}"></img>
-      <a href="blogs/{{_id}}">{{title}}</p></a>
+      <h4>{{title}}</h4>
     </div>
+    </a>
   </div>
   {{/each}}
 </div>
@@ -27,3 +29,17 @@
         percentPosition: true
     });
 </script>
+
+<script>
+  $(".grid-item")
+  .mouseover(function() {
+    $(this).css("background-color", "#2874A6");
+  })
+  .mouseout(function() {
+    $(this).css("background-color", "#D6EAF8");
+  });
+</script>
+
+
+
+
