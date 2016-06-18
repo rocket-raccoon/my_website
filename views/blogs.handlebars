@@ -6,14 +6,24 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    {{#each blogs}}
-    <div class="col-md-3">
-      <div class="content_square">
-        <img src="{{image}}"></img>
-        <a href="blogs/{{_id}}">{{title}}</p></a>
-      </div>
-    </div>
-    {{/each}}
-  <div>
 </div>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  {{#each blogs}}
+  <div class="grid-item">
+    <div class="content_square">
+      <img src="{{image}}"></img>
+      <a href="blogs/{{_id}}">{{title}}</p></a>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<script>
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+    });
+</script>
