@@ -1,12 +1,15 @@
 // Dependencies
-var credentials  = require('./credentials.js');
-var emailer      = require('./lib/emailer.js')(credentials);
-var path         = require('path');
-var express      = require('express');
-var nodemailer   = require('nodemailer');
-var mongoose     = require('mongoose');
-var csurf        = require('csurf');
-var cookieParser = require('cookie-parser'); 
+var credentials    = require('./credentials.js');
+var emailer        = require('./lib/emailer.js')(credentials);
+var fs             = require('fs');
+var path           = require('path');
+var express        = require('express');
+var nodemailer     = require('nodemailer');
+var mongoose       = require('mongoose');
+var csurf          = require('csurf');
+var cookieParser   = require('cookie-parser'); 
+var $ = jQuery = require('jquery');
+require('./public/js/jquery.csv.js');
 
 var Blog         = require('./models/blogs.js');
 var app = express();
@@ -14,6 +17,14 @@ app.set('views', __dirname + '/views');
 
 var hbsConfig = { layoutsDir: app.get('views') + "/layouts", defaultLayout: 'main'}
 var handlebars = require('express-handlebars')(hbsConfig);
+
+// Get our data for mass murder statistics
+/*
+var murder_data_path = './public/csv/mass_shootings.csv';
+var murder_data_str = fs.readFileSync(murder_data_path, 'UTF-8');
+var data = $.csv.toObjects(murder_data_str);
+console.log(data);
+*/
 
 // Configure our MongoDB Connection
 var opts = {
@@ -90,7 +101,7 @@ app.post('/contact', contactPagePost);
 
 // Create a blogs page
 var blogsPage = function(req, res) {
-    Blog.find(function(err, blogs) {
+    Blog.find().sort([['date', 'descending']]).exec(function(err, blogs) {
         var context = {
             blogs: blogs,
         };
@@ -119,11 +130,11 @@ var doodadsPage = function(req, res) {
 };
 app.get('/doodads', doodadsPage);
 
-// Create a page for the NYC picture map
-var nycPicMapPage = function(req, res) {
-    res.render("nyc_picture_map");
+// Create a page for the mass shooting map
+var massShootingMapPage = function(req, res) {
+    res.render("mass_shooting_map", data);
 };
-app.get('/nyc_picture_map', nycPicMapPage);
+app.get('/mass_shooting_map', massShootingMapPage);
 
 // Create 404 page
 var page404 = function(req, res) {
