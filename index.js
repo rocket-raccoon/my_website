@@ -8,8 +8,8 @@ var nodemailer     = require('nodemailer');
 var mongoose       = require('mongoose');
 var csurf          = require('csurf');
 var cookieParser   = require('cookie-parser'); 
-var $ = jQuery = require('jquery');
-require('./public/js/jquery.csv.js');
+//var $ = jQuery = require('jquery');
+//require('./public/js/jquery.csv.js');
 
 var Blog         = require('./models/blogs.js');
 var app = express();
