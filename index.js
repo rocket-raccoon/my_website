@@ -136,6 +136,13 @@ var massShootingMapPage = function(req, res) {
 };
 app.get('/mass_shooting_map', massShootingMapPage);
 
+// Create a page for my most recent blog for testing purposes
+var recentBlogPage = function(req, res) {
+    res.render("consider_the_brogrammer");
+};
+app.get('/recent_blog', recentBlogPage)
+
+
 // Create 404 page
 var page404 = function(req, res) {
     res.status(404);
