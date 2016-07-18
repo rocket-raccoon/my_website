@@ -1,0 +1,634 @@
+Date,State,Gender,Race,Name,Age,Cause
+July 17, 2016,LA,M,B,Gavin Eugene Long,29,G
+July 17, 2016,NY,M,Unknown,	,Unknown,G
+July 16, 2016,CA,M,Unknown,Cody Wayne Jarrett,26,G
+July 16, 2016,FL,M,Unknown,Billy D. Smith,31,G
+July 15, 2016,NC,M,W,Bobby Rex Horne,63,G
+July 15, 2016,MD,M,B,Dayten Ernest Harper,33,G
+July 13, 2016,LA,M,W,Walter Rivers,49,R
+July 13, 2016,NY,M,W,Richard Dinneny	,Unknown,G
+July 13, 2016,AZ,M,W,Donald S. Myers,32,G
+July 13, 2016,OK,M,B,DeAngelo W. Webb,35,TR
+July 12, 2016,AK,M,W,Benjamin Zekovic,23,G
+July 12, 2016,AL,M,W,	,Unknown,TR
+July 12, 2016,AZ,M,Unknown,	,Unknown,V
+July 11, 2016,NY,M,B,Orville Edwards,39,G
+July 11, 2016,MI,M,L,Pablo Medina,41,G
+July 11, 2016,IL,M,B,Jason Brooks,41,G
+July 11, 2016,MI,M,Unknown,Larry Darnell Gordon,44,G
+July 11, 2016,CA,M,Unknown,Joseph Mann,50,G
+July 10, 2016,CA,M,L,Fermín Vincent Valenzuela III,32,TR
+July 9, 2016,MO,M,B,Tyler Gebhard,20,G
+July 9, 2016,OK,M,B,Andre Johnson,40,G
+July 9, 2016,TX,M,B,Alva Braziel,38,G
+July 8, 2016,AZ,M,W,Abraham Smith,30,G
+July 8, 2016,AL,M,B,Earnest Lee Fells,63,G
+July 8, 2016,TX,M,B,Micah Xavier Johnson,25,O
+July 7, 2016,CA,M,Unknown,Adam Smith,33,G
+July 7, 2016,CA,M,L,Vinson Ramos,36,G
+July 7, 2016,OK,M,Unknown,Thomas Vandemark,65,G
+July 6, 2016,CA,M,L,Victor Vidal Sigala,19,G
+July 6, 2016,MN,M,B,Philando Castile,32,G
+July 6, 2016,AZ,F,Unknown,Melissa Ventura,24,G
+July 6, 2016,OR,M,W,Joshua Bolster,29,G
+July 5, 2016,KY,M,W,Jerry Dale Hardwick,34,R
+July 5, 2016,CA,M,W,Sam Newby,49,G
+July 5, 2016,SC,M,W,William Tracy Patterson,34,G
+July 5, 2016,LA,M,B,Alton Sterling,37,G
+July 5, 2016,DC,M,Unknown,Sidney Washington Jr.,21,G
+July 4, 2016,CA,M,L,Anthony Nunez,18,G
+July 4, 2016,TX,,Unknown,	,Unknown,G
+July 4, 2016,CA,M,L,Pedro Erik Villanueva,19,G
+July 4, 2016,NY,M,B,Delrawn Small,37,G
+July 3, 2016,NV,M,L,Raul Saavedra-Vargas,24,G
+July 3, 2016,LA,M,W,Shannon Labit,40,G
+July 2, 2016,MS,M,B,Carlos Brown	,Unknown,CR
+July 2, 2016,NC,M,B,Jai Lateef Solveig Williams,35,G
+July 2, 2016,TN,M,W,Jonathan Justice,50,G
+July 1, 2016,OK,M,W,Roger "Rocky" Dean Bales,56,T
+July 1, 2016,WI,M,Unknown,Helmut Wihowski,58,G
+July 1, 2016,GA,M,W,Steven Patrick McQueen,30,G
+July 1, 2016,SC,M,W,Alexis George Mishtowt,63,G
+July 1, 2016,IN,M,W,Michael Damore,28,V
+June,,,Unknown,,Unknown,
+June 30, 2016,CO,M,Unknown,Tristan Vilters,24,G
+June 30, 2016,WI,M,W,Michael William Schumacher,41,G
+June 30, 2016,OH,M,B,Kawme Dejuan Patrick,25,G
+June 30, 2016,WY,M,L,Jasen Scott Ramirez,44,G
+June 29, 2016,LA,M,B,Tyrone Reado	,Unknown,G
+June 29, 2016,KY,M,W,Jessie J. Mills,30,G
+June 29, 2016,IA,M,B,Lafayette Evans,37,G
+June 29, 2016,HI,M,Unknown,Walden Dang,61,G
+June 28, 2016,CA,M,A,Barry Prak,27,G
+June 28, 2016,DE,M,W,Raymond Hutson,25,G
+June 28, 2016,DC,M,B,Sherman Evans,63,G
+June 28, 2016,IA,M,W,Michael Ervan Disbrowe,28,G
+June 27, 2016,CA,M,L,Edgar Rodriguez,30,V
+June 27, 2016,NM,M,W,Travis Vierra,26,G
+June 27, 2016,GA,M,W,Blake Peacock,32,G
+June 26, 2016,CT,M,L,Daniel Reyes,27,G
+June 26, 2016,MI,M,W,Terry Lynn Maurer,51,G
+June 26, 2016,NE,M,B,Germichael Kennedy,22,G
+June 26, 2016,IL,M,B,Donte L. Johnson,30,G
+June 26, 2016,FL,M,W,Waldemar Bogusiewicz,59,G
+June 26, 2016,GA,M,L,Rodrigo Guardiola,36,G
+June 25, 2016,CA,M,W,Dylan Noble,19,G
+June 24, 2016,AR,M,W,Randolph Blecher,50,G
+June 24, 2016,TX,F,W,Christy Sheats,42,G
+June 24, 2016,OK,M,L,Miguel Angel Chavez-Angles,42,G
+June 24, 2016,IL,M,B,Angelo Brown,35,G
+June 24, 2016,NJ,M,B,Ismael Miranda,36,G
+June 23, 2016,NM,M,L,Josh Herrera,29,G
+June 23, 2016,WI,M,B,Jay Anderson,25,G
+June 23, 2016,GA,M,B,Deravis Caine Rogers,22,G
+June 22, 2016,TX,M,Unknown,Shaun Trevor Walke,31,G
+June 22, 2016,MI,M,B,Antonio Glenn Richardson,46,TR
+June 22, 2016,MS,M,B,Quencezola Maurice Splunge,44,G
+June 22, 2016,CO,M,W,Josiah Williams,25,G
+June 22, 2016,AL,M,B,Isaiah Core III,20,G
+June 22, 2016,FL,M,L,Roger Ponce,37,G
+June 21, 2016,WY,M,Unknown,Jeffrey A. Hyde,50,G
+June 21, 2016,NC,M,L,Pedro Cruz-Amado,24,G
+June 21, 2016,NH,M,W,Lane Lesko,19,G
+June 20, 2016,AZ,M,W,Devin Christopher Scott,20,G
+June 20, 2016,TX,M,L,Adan Hilario Jr.,11,V
+June 20, 2016,SC,M,Unknown,Raphael M. Bostick,23,G
+June 19, 2016,OK,M,B,Lorez Chambers,43,R
+June 19, 2016,FL,M,B,Clarence Mahogany X Howard,22,G
+June 19, 2016,MS,M,B,Antwun Shumpert,37,G
+June 19, 2016,FL,M,Unknown,Anthony Ford,30,G
+June 19, 2016,CA,M,W,Sergey Makarenko,17,G
+June 19, 2016,NY,M,B,Rashaun Lloyd,25,G
+June 18, 2016,AL,M,W,William Thomas Hennessey,34,G
+June 16, 2016,CO,M,L,Nicholas Damon,30,G
+June 16, 2016,OH,M,Unknown,John Anderson,59,G
+June 16, 2016,MT,M,W,Peter Grandpre,36,G
+June 16, 2016,NM,M,L,Ronald Delfino,21,G
+June 15, 2016,WI,M,W,Michael D. Rasmussen,38,G
+June 15, 2016,OK,M,W,Russell Rosser,43,G
+June 14, 2016,MO,M,W,Nicholas Ferro,47,G
+June 14, 2016,CA,M,L,Fernando Geovanni LLanez,22,G
+June 14, 2016,WA,M,W,Kenneth Allen Pointer,43,G
+June 14, 2016,TX,M,O,Mohammad Sadegh Moghaddam,54,G
+June 14, 2016,ID,M,L,Noel Rodriguez,50,G
+June 13, 2016,AL,M,B,Michael Moore,19,G
+June 13, 2016,RI,M,L,Edward Acquisto,80,G
+June 13, 2016,NY,M,W,Joshua Sciscm,33,G
+June 12, 2016,KY,M,B,John Williams,61,G
+June 12, 2016,UT,M,W,Daniel Bennett Edwards,23,G
+June 12, 2016,MS,M,B,Lyndarius Witherspoon,27,G
+June 12, 2016,FL,M,O,Omar Mir Seddique Mateen,29,G
+June 11, 2016,IN,M,W,Charles Todero,30,TR
+June 11, 2016,CA,M,L,Jesus Alfredo Duran,31,G
+June 11, 2016,NC,M,W,Clayton Millsaps,29,G
+June 10, 2016,CA,M,B,Keith Bursey,31,G
+June 10, 2016,AZ,M,L,	,Unknown,G
+June 10, 2016,CO,M,L,Bobby Sanchez,32,G
+June 10, 2016,WA,M,L,J. Juan Briseno-Ortega,50,G
+June 9, 2016,TX,M,B,John Michael Brisco,52,G
+June 9, 2016,AL,M,W,William Michael Hollis,34,G
+June 9, 2016,GA,M,W,William David Powell,63,G
+June 9, 2016,MI,M,W,Clifford Leroy Tucker,68,G
+June 9, 2016,PA,M,W,James Allen Nickol,38,G
+June 8, 2016,MO,M,L,Carlos Garcia,43,G
+June 7, 2016,CA,M,W,Weston Sites,15,V
+June 7, 2016,CA,M,L,Omar Villagomez,21,G
+June 7, 2016,VA,M,B,Willis N. Walker Jr.,49,G
+June 7, 2016,OK,M,W,Andrew Henson,25,G
+June 6, 2016,OH,M,B,Henry Green V,23,G
+June 6, 2016,HI,M,PI,Kalyp Allen Rapoza,25,G
+June 5, 2016,MI,F,W,Hope Sevidal-Elferdink,38,G
+June 5, 2016,FL,M,W,Christopher Michael Moran,31,G
+June 4, 2016,CA,M,Unknown,Daniel Jonathan Shaham,31,G
+June 4, 2016,IN,M,W,Larry Stepp,31,G
+June 3, 2016,SD,M,I,Jamie Lee Brave Heart,28,G
+June 3, 2016,AZ,M,I,Hubert Thomas Burns Jr.,34,G
+June 3, 2016,AL,M,B,Demarco Rhymes,35,G
+June 3, 2016,AK,M,W,Joshua Smith,33,G
+June 2, 2016,KY,M,W,Douglas Miller,49,V
+June 2, 2016,NC,M,B,Rodney Rodriguez Smith,18,G
+June 2, 2016,VA,M,B,Willie Demetrius James,43,G
+June 1, 2016,GA,M,B,Michael Johnson,21,G
+June 1, 2016,KY,M,W,Daniel Pigg,51,G
+June 1, 2016,AZ,M,W,	,Unknown,G
+May,,,Unknown,,Unknown,
+May 31, 2016,OR,M,W,Nicholas Berger,36,G
+May 31, 2016,AZ,M,Unknown,Jordan Black,18,V
+May 30, 2016,OR,M,W,Robert Wickizer,70,G
+May 30, 2016,AZ,M,B,Osee Calix,33,G
+May 29, 2016,NM,M,W,Dennis Humphrey,58,G
+May 29, 2016,FL,M,W,Donald Edward Brown III,32,G
+May 29, 2016,TX,M,L,Dionisio Garza III,25,G
+May 29, 2016,NC,M,W,John Mark Coffey,53,G
+May 29, 2016,NC,M,W,Todd Brent Burroughs,38,G
+May 28, 2016,OK,M,B,Ollie Lee Brooks,64,CTR
+May 28, 2016,TX,M,Unknown,Ernesto Carrman,41,TR
+May 28, 2016,AL,M,Unknown,Dennis Hudson,50,G
+May 27, 2016,IN,M,W,Terry Edwards,59,G
+May 27, 2016,FL,F,Unknown,,48,G
+May 26, 2016,TX,M,L,,45,G
+May 26, 2016,CA,M,L,Fernando Castro,19,G
+May 26, 2016,IL,M,W,Warren Christian III,43,G
+May 26, 2016,IL,M,B,Devonte Gates,21,G
+May 26, 2016,NM,M,L,Angel Daniel Navarro,25,G
+May 26, 2016,MN,M,Unknown,Eugene Francis Smith,29,G
+May 25, 2016,OH,M,B,Terry Frost III,20,G
+May 25, 2016,OK,M,W,Derek Allan Prophet,43,G
+May 25, 2016,FL,M,B,Doll Pierre-Louis,24,G
+May 25, 2016,MO,M,Unknown,Leslie Wayne Goletz,57,G
+May 24, 2016,NM,M,L,Mario Montoya,31,G
+May 24, 2016,OR,M,W,Bodhi Wilson Dean Phelps,22,G
+May 23, 2016,FL,M,B,Vernell Charles Bing Jr.,22,G
+May 23, 2016,AZ,M,I,Verl Bedonie,26,G
+May 22, 2016,CO,M,W,Bryson Fischer,28,G
+May 22, 2016,MA,M,L,Jorge Zambrano,35,G
+May 22, 2016,FL,M,B,Michael Eugene Wilson Jr.,27,G
+May 21, 2016,OR,M,W,Travis Anthony Moore,38,G
+May 21, 2016,NC,M,W,John Cousins Jr,,V
+May 21, 2016,SC,M,W,Norman Campbell,63,G
+May 21, 2016,AZ,M,I,Mark Brandon Nelson,31,G
+May 20, 2016,AZ,M,W,Brian Steen,40,R
+May 20, 2016,NE,M,B,Joshua S. Beebee,31,G
+May 19, 2016,CA,M,L,Jaime Ide,35,G
+May 19, 2016,KY,M,W,Timothy Brandon Stacy,36,G
+May 19, 2016,FL,M,B,Kentrill William Carraway,22,G
+May 19, 2016,CA,F,B,Jessica Williams,29Birth name Jessica Leanne Nelson,G
+May 19, 2016,NV,M,L,Jeremias Cruz,30,G
+May 18, 2016,SC,M,B,Reginald Darnell Dogan,52,G
+May 18, 2016,MO,M,W,Joseph B. Weatherby,44,G
+May 18, 2016,AZ,M,L,Israel Santos-Banos,19,G
+May 18, 2016,NY,M,W,Garry Conrad Jr.,46,G
+May 17, 2016,CA,M,W,Luke L. Sanders,36,G
+May 17, 2016,CO,M,W,Jeremy Thompson,45,R
+May 16, 2016,MA,M,W,Scott Macomber,48,TR
+May 16, 2016,IN,M,W,Justin Addler,32,R
+May 15, 2016,GA,M,B,Jabril Robinson,23,G
+May 15, 2016,FL,M,W,Cody N. Marsh,19,G
+May 15, 2016,IL,M,W,Dracy Pendleton,35,G
+May 14, 2016,FL,M,W,Jeffrey Sims,59,G
+May 14, 2016,AZ,M,I,Francis Clark,43,G
+May 14, 2016,GA,M,W,Ryan Johnson,34,G
+May 13, 2016,NV,M,B,James Craig Simpson,31,G
+May 13, 2016,CA,M,L,Robert Mark Diaz,28,G
+May 13, 2016,NJ,M,W,Michael Gaffney,37,G
+May 13, 2016May 13, 2016,FL,F,LF,Mylynda Martinez,27	Kimberly King,VV
+May 12, 2016,AL,M,B,David Dementarius Canty,51,V
+May 12, 2016,CO,M,B,Sean Ryan Mondragon,24,G
+May 11, 2016,OK,M,W,Stephen Godfrey,69,G
+May 11, 2016,CA,M,A,Thongsoune Vilaysane,30,G
+May 11, 2016,CO,M,W,Stephen Ray Schuster,35,G
+May 10, 2016,TX,F,W,Nancy Friedrich,35,TR
+May 10, 2016,MA,M,B,Arthur J. DaRosa,28,G
+May 10, 2016,TX,M,W,Jamie Allen Stotts,29,G
+May 10, 2016,ME,M,I,Derek J. Sam,29,G
+May 9, 2016,FL,M,W,Norman Eric Stauber,50,V
+May 9, 2016,TX,M,B,Arthur R. Williams Jr.,33,G
+May 9, 2016,MS,M,W,Christian Bowman,23,G
+May 9, 2016,AR,M,B,Willie Tillman,33,G
+May 9, 2016,IL,M,W,Michael Johnson,26,G
+May 9, 2016,MN,M,B,Jaffort Demont Smith,33,G
+May 8, 2016,OK,M,W,Alexander Larmon,44,V
+May 8, 2016,IL,F,W,Kelly Wilson,26,V
+May 7, 2016,VA,M,W,Robert E. Crittsinger Jr.,79,V
+May 7, 2016,CA,M,B,Lionel Gibson,21,G
+May 7, 2016,WA,M,W,Nathan Quinn Cates,29,G
+May 7, 2016,FL,M,B,Alton Witchard,37,G
+May 6, 2016,WV,M,B,Ronald D. Williams Jr.,23,G
+May 5, 2016,WI,M,B,Burt T. Johnson,38,G
+May 5, 2016,LA,M,W,Corey DiGiovanni,36,G
+May 5, 2016,FL,F,B,Deresha Armstrong,26,G
+May 4, 2016,CA,M,Unknown,Matthew Tucker,18,G
+May 4, 2016,MO,M,W,Gerry J. Thompson,40,G
+May 4, 2016,PA,M,W,Richard Ferretti,52,G
+May 4, 2016,WA,M,W,Cayce A. DiTullio,39,G
+May 3, 2016,CA,M,W,Raymond Hopper,59,G
+May 3, 2016,MD,M,W,Jeffrey Y. DeLong,67,V
+May 2, 2016,UT,M,W,David Shane Anderson,36,G
+May 1, 2016,SC,M,B,Benston Calvin Clinkscales,26,TR
+May 1, 2016,TN,M,W,Ronald Branch,28,G
+May 1, 2016,FL,M,B,Charlin Charles,25,G
+April,,,Unknown,,Unknown,
+April 30, 2016,CA,M,A,Marion Habana,28,G
+April 30, 2016,WI,M,W,Oswald Mattner,42,G
+April 30, 2016,UT,M,W,Mark Daniel Bess,33,G
+April 30, 2016,AZ,M,W,Bender Dass,55,G
+April 29, 2016,OR,M,Unknown,Stephen Robert Heberliing,68,V
+April 29, 2016,MO,M,W,Jeffrey Darrell Hobbs,48,G
+April 28, 2016,ID,M,W,Lee Easter,54,G
+April 28, 2016,WA,M,W,Michael S. Kurtz,45,G
+April 28, 2016,TX,M,B,Ashtian Duane Barnes,24,G
+April 28, 2016,FL,M,B,Kendar del Rosario,37,G
+April 27, 2016,CO,M,W,Damon Blair,21,G
+April 27, 2016,GA,M,A,Cin Lam Mung,34,G
+April 27, 2016,TX,M,W,Darrel Machemehl,44,G
+April 26, 2016,OK,M,W,Austin Vance,22,R
+April 26, 2016,VA,M,B,Joshua Brooks,26,G
+April 26, 2016,HI,M,W,Jonathan Watson,46,R
+April 26, 2016,CO,M,W,Robin Alan Barber,28,G
+April 26, 2016,NM,F,W,Jacqueline Burke,24,G
+April 25, 2016,NC,F,W,Kay Frances Campbell,60,G
+April 24, 2016,MS,M,W,Bradford Macomber,53,TR
+April 24, 2016,WI,M,W,Jakob E. Wagner,18,G
+April 24, 2016,FL,M,B,Demarcus Semer,21,G
+April 23, 2016,VA,M,W,Eric C. Wakup,30,G
+April 23, 2016,NY,M,W,Carl Baranishyn,51,G
+April 23, 2016,AZ,M,W,Mitchell Oakley,24,G
+April 23, 2016,TX,M,W,Tyler Hunkin,29,G
+April 21, 2016,NM,F,W,Nikki Shae Bascom,31,G
+April 21, 2016,MA,M,L,Mario Mejia Martinez,48,G
+April 21, 2016,AR,M,W,Jackie Lee Kirkham,52,G
+April 20, 2016,VA,M,W,Paul Arthur Gianelos,45,R
+April 20, 2016,FL,M,W,Francis Scot Dufore,41,G
+April 19, 2016,AL,M,W,Daniel Blackmon,38,G
+April 19, 2016,MO,M,B,Jorevis Scruggs,15,G
+April 19, 2016,NC,M,A,Sylasone Ackhavong,41,G
+April 19, 2016,MD,M,B,Rico Don Rae Johnson,28,G
+April 18, 2016,GA,M,B,Demetrius Dorsey,18,G
+April 18, 2016,NY,M,B,Edson Thevenin,38,G
+April 18, 2016,TX,M,W,Eric John Wilson,22,G
+April 17, 2016,NJ,M,B,Richard Bard Jr.,31,G
+April 17, 2016,OH,F,B,Kisha Arrone,35,G
+April 17, 2016,NY,M,B,George Tillman,32,G
+April 16, 2016,SC,M,B,Bennie D. Bennett,56,V
+April 16, 2016,OK,M,W,David Swaatsky,52,G
+April 16, 2016,IL,M,W,Gerald Robert Boyes,53,G
+April 15, 2016,CA,M,L,Clemente Najera Aguirre,38,G
+April 15, 2016,IN,M,W,Storm Allen Smith,26,G
+April 15, 2016,MD,M,B,Robert Jerome Howard,44,G
+April 14, 2016,KS,M,W,Jeff Robertson,54,G
+April 13, 2016,TN,M,W,Koltlee Whitson,26,G
+April 13, 2016,TX,M,W,Jeffrey Gray Wise,52,G
+April 13, 2016,CA,M,B,Rodney Watts,35,G
+April 12, 2016,IL,M,L,Joshua Moreno,38,G
+April 12, 2016,CO,M,Unknown,Dion Damon,40,G
+April 12, 2016,FL,M,W,Travis Wood,20,G
+April 11, 2016,IL,M,B,Pierre L. Loury,16,G
+April 11, 2016,NV,M,L,Efren Trujillo-Soriano,22,G
+April 10, 2016,GA,M,B,Jerand Edward Ross,24,G
+April 10, 2016,CA,M,L,Arturo Yobani-Torrez Valdez,27,G
+April 10, 2016,TN,M,L,Luis Felipe Soto,29,G
+April 10, 2016,NY,M,W,William J. Clark III,30,G
+April 10, 2016,CA,M,W,Lonnie Ball,39,G
+April 9, 2016,PA,M,B,Quron Williams,19,G
+April 9, 2016,WI,F,W,Melissa M. Abbott,25,G
+April 9, 2016,NJ,M,B,Diahlo Grant,27,G
+April 8, 2016,MI,M,B,Lamont Gulley,43,G
+April 8, 2016,CA,M,B,Dazion Flenaugh,40,G
+April 7, 2016,NE,M,I,Lance C. McIntire,44,G
+April 7, 2016,AR,M,W,Christopher Wilson,41,G
+April 7, 2016,CA,M,I,Luis Demetrio Gongora Pat,45,G
+April 6, 2016,CA,M,L,Cesar Frias,20,G
+April 6, 2016,TN,F,B,Laronda Sweatt,40,G
+April 6, 2016,OH,M,W,Marvin Cremeans,60,G
+April 6, 2016,FL,M,W,Christopher Erdman,39,TR
+April 5, 2016,GA,M,W,Thomas Lagano,52,G
+April 5, 2016,IN,M,B,Kevin Hicks,44,G
+April 5, 2016,MA,M,W,Peter Doherty,52,G
+April 4, 2016,OK,M,B,Darius Randell Robinson,41,CR
+April 4, 2016,MN,M,L,Raul Salvador Marquez Heraldes,50,G
+April 3, 2016,AL,F,W,Melissa C. Boarts,36,G
+April 3, 2016,TX,M,W,Darrin Andrew Martin,25,G
+April 3, 2016,WI,M,W,David Mack,69,G
+April 2, 2016,VA,M,A,Jeffrey Ponce Aguilar,26,V
+April 2, 2016,IN,M,B,Cameron Glover,30,G
+April 1, 2016,LA,M,B,Grant Hamilton,34,V
+April 1, 2016,AZ,M,L,Ruben Cossyleon,25,G
+April 1, 2016,TX,M,L,Joel Fabela,37,G
+April 1, 2016,TX,M,L,Jesus “Chuy” Juarez,65,G
+March,,,Unknown,,Unknown,
+March 31, 2016,NJ,M,B,John Parham,67,V
+March 31, 2016March 31, 2016,MD,M,BM,Matthew Vincent Wood Jr.,43	Kimani Michael Johnson,GG
+March 31, 2016,VA,M,B,James Brown III,34,G
+March 30, 2016,CA,M,L,Angel Montion,33,G
+March 30, 2016,MN,F,W,Denise Fairchild,50,G
+March 29, 2016,CA,F,W,Alice Suzanne Goudie,64,V
+March 29, 2016,SC,M,W,Robert Morgan Garrison,51,G
+March 29, 2016,CA,M,W,Joseph Louis Melvin,46,G
+March 28, 2016,NM,M,W,Robert Guerin,33,G
+March 27, 2016,TX,M,W,Earl Ashby,33,G
+March 27, 2016,AZ,F,I,Loreal Barnell-Tsingine,27,G
+March 27, 2016,MO,M,W,Jeffrey K. Lanahan,34,G
+March 27, 2016,MA,M,L,Jose Perez,39,G
+March 27, 2016,NC,M,B,Deriante Miller,18,G
+March 26, 2016,FL,M,W,Patrick Matthew McManamon,46,G
+March 26, 2016,VA,M,W,Terrance Blackburn,36,G
+March 26, 2016,SC,M,W,Donald Andrew White,55,G
+March 24, 2016,CA,M,W,Andrew Mike,29,G
+March 24, 2016,RI,M,B,Dominique Silva,24,G
+March 24, 2016,MO,M,B,Jermon J. Seals,22,G
+March 24, 2016,CO,M,L,Joel Gonzales,48,G
+March 24, 2016,NM,M,L,Mario Sandoval,19,G
+March 24, 2016,FL,M,W,Dustin Edward Jones,32,G
+March 24, 2016,MA,M,W,Robert L. Dussourd,44,G
+March 24, 2016,TN,M,B,Alexio Allen,30,G
+March 23, 2016,CA,M,L,Raymond Gonzalez,34,G
+March 23, 2016,CO,M,W,Daven Scott Hannu,51,G
+March 23, 2016,FL,M,L,Ethan James Rincon,25,G
+March 22, 2016,VA,M,W,Travis J. Blair,33,G
+March 22, 2016,VT,M,W,Ralph “Phil” Grenon,76,G
+March 21, 2016,CT,M,W,Dylan Pape,25,G
+March 21, 2016,PA,M,W,Edward Gorinski,28,G
+March 21, 2016,FL,M,B,Robert Dentmond,16,G
+March 20, 2016,IN,M,L,Abraham Martinez,62,G
+March 20, 2016,VA,M,W,Boyd Keith Ballard,61,G
+March 20, 2016,PA,M,W,Clarence Briggs,54,G
+March 19, 2016,KY,M,W,Dylan Whitaker,23,G
+March 19, 2016,LA,M,W,Joshua Douglas,24,G
+March 19, 2016,IL,M,B,Thurman Reynolds,21,G
+March 19, 2016,VA,F,B,India Beaty,25,G
+March 19, 2016,FL,M,B,Torrey Lamar Robinson,35,TR
+March 18, 2016,ID,M,W,David Alma Giles,60,G
+March 18, 2016,CA,M,Unknown,Michael Mallett,49,G
+March 17, 2016March 17, 2016,TX,M,BM,Scott Bennett,29	Christopher Nelms,GG
+March 17, 2016,NC,M,W,Dennis Penny,40,G
+March 17, 2016,MN,M,A,Map Kong,38,G
+March 17, 2016,FL,M,A,Sunny Chin,53,G
+March 16, 2016,NY,M,L,Richard Gonzalez,55,R
+March 16, 2016,FL,M,L,Dallis Junior Hernandez,22,G
+March 16, 2016,CA,M,L,Vincent Avila,25,G
+March 16, 2016,TX,M,L,Eric Hernandez,33,G
+March 16, 2016,CA,M,L,Cristian Rene Medina,23,G
+March 15, 2016,IN,M,W,Daniel Wooters,38,G
+March 15, 2016,TX,M,W,Ed McIver,42,G
+March 15, 2016,KY,M,W,Joseph Harris,34,G
+March 14, 2016,IL,M,B,Lamar Harris,29,G
+March 13, 2016,NJ,M,B,Kevin Higgenbotham,47,CR
+March 13, 2016,MD,M,B,Jacai Colson,28,G
+March 13, 2016,TX,M,L,Jose Raul Cruz,16,G
+March 13, 2016,WA,F,W,Amy Jean McCoy,38,G
+March 13, 2016,CA,M,W,Gevork Alachadzhyan,45,G
+March 13, 2016,AL,M,W,Wesley Chad Deerman,26,G
+March 13, 2016,KY,M,W,Michael Roll,52,TR
+March 13, 2016,TN,M,W,Joshua William Grubb,33,G
+March 12, 2016,NC,M,W,Christopher Michael Tokazowski,43,G
+March 12, 2016,MI,M,W,William John Jennings Jr.,49,V
+March 12, 2016,PA,M,B,Keith Montgomery,24,G
+March 12, 2016,TX,M,B,Peter Matthew Gaines,35,G
+March 12, 2016,TX,M,B,Marco Antonio Loud,20,G
+March 12, 2016,IL,M,W,Jack Goodman,46,G
+March 11, 2016,CA,M,L,Teodoro Valencia Jr.,23,G
+March 11, 2016,KS,M,W,Manford "Butch" Moore,51,G
+March 11, 2016,VA,M,B,Tyre Privott,25,G
+March 10, 2016,CO,M,L,German Gustavo Anchondo Gonzalez,23,G
+March 10, 2016,TX,M,W,Jason Meador,50,G
+March 10, 2016,NV,M,B,Arteair Porter,22,G
+March 10, 2016,CA,M,L,Martin Rene Hurtado,21,G
+March 10, 2016,MS,M,W,Wesley Sheppard,37,G
+March 9, 2016,FL,M,W,Jeffery Casale,27,G
+March 8, 2016,NC,M,W,Alex Thompson,37,T
+March 7, 2016,NM,M,L,Daniel Chavez,41,G
+March 7, 2016,MT,M,W,John Charles "JC" Graham,42,G
+March 7, 2016,CA,M,L,Abelino Cordova-Cuevas,28,TR
+March 7, 2016,KS,M,W,Randall J. Selsor,45,G
+March 7, 2016,CA,M,L,Byron Rosas,45,G
+March 7, 2016,NY,M,W,Phillip Vitullo,49,G
+March 6, 2016,ND,M,W,James Anthony Scott,42,G
+March 6, 2016,TX,M,W,Mark Minnick,51,G
+March 6, 2016,CA,M,L,Osvaldo Torres,41,G
+March 6, 2016,NY,M,W,Darrell Bosell,34,G
+March 5, 2016,VI,M,B,Evan Ezekiel Joseph,38,G
+March 5, 2016,TX,M,W,Herbert Ballance,22,G
+March 4, 2016,AR,M,W,John Alan Chamberlain,66,G
+March 4, 2016,KY,M,W,Brandon Stanley,30,G
+March 4, 2016,AZ,M,L,Sergio Ochoa,27,G
+March 3, 2016,CA,M,Unknown,,51,V
+March 2, 2016,PA,M,W,Daniel David Burkhardt,41,G
+March 2, 2016,MD,M,W,Travis Boyd Bradley,36,G
+March 1, 2016,MS,M,W,Mickey Dewayne Sweatt,37,G
+March 1, 2016,TX,M,L,Jorge Brian Gonzalez,22,G
+March 1, 2016,FL,M,L,Dimitri Corcino,38,G
+February,,,Unknown,,Unknown,
+February 29, 2016,NC,M,B,Akiel Denkins,24,G
+February 28, 2016,AL,M,W,Nathan Grissom,41,G
+February 28, 2016,SD,M,W,Earl W. Hicks,II,G
+February 27, 2016,TX,M,L,Fernando Hernandez,23,G
+February 27, 2016,SD,M,W,Abraham Mitchell Fryer,35,G
+February 26, 2016,VA,M,B,Kionte Desean Spencer,18,G
+February 25, 2016,KS,M,B,Cedric Larry Ford,38,G
+February 25, 2016,NV,M,W,Tristan Conti,19,G
+February 25, 2016,CO,M,W,Luke Nathan Miller,37,G
+February 25, 2016,AL,M,B,Gregory Gunn,56,G
+February 25, 2016,NE,M,W,Alex J. Zoucha,31,R
+February 24, 2016,WI,M,B,Christopher J. Davis,21,G
+February 24, 2016,AZ,M,L,Victor Rivera,27,G
+February 24, 2016,CA,M,L,Francisco Garcia,26,G
+February 24, 2016,CO,M,W,Martin T. Wirth,58,G
+February 24, 2016,MO,M,W,Robert Keil,16,G
+February 23, 2016,LA,M,B,Travis Stevenson,48,G
+February 23, 2016,CA,M,L,Angel Alan Gleason,36,G
+February 23, 2016,AZ,M,PI,Alex Arthur Buckner,26,G
+February 23, 2016,TX,M,L,Baltazar Ramos,39,G
+February 22, 2016,CT,M,B,Thomas Lane,37,TR
+February 22, 2016,OH,M,W,Rouven Loch,22,G
+February 22, 2016,AK,F,I,Patricia Kruger,38,G
+February 22, 2016,TX,M,W,David Michael Green II,38,G
+February 22, 2016,CA,M,W,Jamie Clark Long,45,G
+February 22, 2016,CO,M,L,Gerardino Cayetano Gonzalez Jr.,33,G
+February 21, 2016,AZ,F,I,Sherrisa Homer,36,G
+February 21, 2016,WA,M,B,Che Andre Taylor,47,G
+February 21, 2016February 21, 2016,CA,F,BM,Kisha Michael,31 	Marquintan Sandlin,GG
+February 20, 2016,OH,M,B,Ariel J. Clark,31,R
+February 20, 2016,CA,M,L,Danny Rendon,30,G
+February 20, 2016,WA,M,L,Marcos Perea,41,G
+February 20, 2016,NM,M,L,Edgar Camacho-Alvarado,23,G
+February 20, 2016,MS,M,W,Charles Lee Lambert,45,G
+February 19, 2016,TN,M,W,Curtis James Dugger,31,G
+February 19, 2016,UT,M,W,Justin Patrick Moses,35,G
+February 18, 2016,TX,M,L,Ronnie Lee Padron,32,G
+February 18, 2016February 18, 2016,CA,M,LM,Jose Manuel Quintanilla,30Oscar Reyes,GG
+February 18, 2016,GA,M,W,Joseph Noel,25,G
+February 18, 2016,CO,M,W,Travis Wood Jr.,24,V
+February 17, 2016,NM,M,L,Guadalupe Sauceda,52,G
+February 17, 2016,OH,M,B,Paul Gaston,37,G
+February 16, 2016,NY,M,W,John Tozzi,61,G
+February 16, 2016,MO,M,W,Destry Meikle,48,G
+February 16, 2016,AR,M,W,Shawn Dickens,30,G
+February 16, 2016,CT,M,W,Christopher Andrews,51,G
+February 15, 2016,TX,M,L,Inocencio Cardenas Jr.,38,TR
+February 15, 2016,CA,M,W,Brandon Lee Witt,39,G
+February 14, 2016,FL,M,W,Marc Stoddart,50,G
+February 14, 2016,CA,M,W,Rammy Jaradat,26,G
+February 14, 2016,CA,M,L,Eduardo Edwin Rodriguez,29,G
+February 13, 2016,TX,M,B,Calin Roquemore,24,G
+February 13, 2016,LA,M,B,Calvin Smith,22,G
+February 13, 2016,VA,M,B,Dyzhawn L. Perkins,19,G
+February 13, 2016,GA,M,W,Jonathan Fowler,32,V
+February 13, 2016,IA,M,B,Ali Eisa Abdalla Yahia,29,G
+February 12, 2016,FL,M,W,Talmadge King,47,G
+February 12, 2016,NY,F,B,Sahlah Ridgeway,32,G
+February 12, 2016,TX,M,W,David Glen Watson,53,G
+February 12, 2016,MA,M,B,Peter Fanfan,29,G
+February 12, 2016,CA,M,W,Matthew Thomas Quinn,45,G
+February 11, 2016,NC,M,W,Alijah Jackson,35,G
+February 11, 2016,OH,M,B,Mohamed Barry,30,G
+February 10, 2016February 10, 2016,NY,F,WM,Deborah Roman,44	Nathan Roman,GG
+February 10, 2016,MN,M,W,John Birkeland,52,G
+February 10, 2016,TX,M,PI,Anthony Bertoni,56Formerly known as James Frederick Torres,G
+February 10, 2016,AK,M,I,Vincent Nageak III,36,G
+February 10, 2016,KY,M,W,Timothy Vessels,41,G
+February 10, 2016,MD,M,W,David Brian Evans,67,G
+February 9, 2016,HI,M,PI,Scottie Yanagawa,29,G
+February 9, 2016,CA,M,L,Gustavo Najera,22,G
+February 8, 2016,AL,M,B,Randy Joe Nelson,49,TR
+February 8, 2016,LA,M,B,Eric Harris,22,G
+February 8, 2016,TX,M,B,David Joseph,17,G
+February 8, 2016,PA,M,B,Shalamar Longer,33,G
+February 7, 2016,AR,M,W,Phillip Luchsinger,36,G
+February 7, 2016,OH,M,B,Marese Collins,23,G
+February 6, 2016,CA,M,L,Jose Mendez,16,G
+February 6, 2016,OH,M,W,Steve Davis,47,G
+February 6, 2016,NJ,M,L,Michael Laniado,27,G
+February 5, 2016,OR,M,W,Phillip Ferry,55,G
+February 5, 2016,CA,M,B,Wendell Celestine Jr.,37,R
+February 5, 2016,TX,M,L,Hector Leroy,43,G
+February 5, 2016,LA,F,W,Emily Gassie-Thibodeaux,23,G
+February 5, 2016,NC,M,W,Vinson Ray Strickland,51,G
+February 5, 2016,HI,M,PI,Ronald Kimo Barawis Jr.,38,G
+February 5, 2016,FL,M,W,Blake Fitzgerald,30,G
+February 5, 2016,MO,M,W,Scott Richard Harless,47,G
+February 4, 2016,TX,M,B,Antronie Scott,36,G
+February 4, 2016,OH,M,W,Thomas Hirko,54,G
+February 4, 2016,AZ,T,W,Danielle Jacobs,24aka Kayden Clarke,G
+February 3, 2016,CA,M,W,Joshua Shane Bispo,42,G
+February 3, 2016,FL,M,W,Cristiaan Oliver Dubrino,31,G
+February 3, 2016,SD,M,I,Raymond Gassman,22,G
+February 3, 2016,OK,M,W,John Henry Neuman,53,G
+February 2, 2016,TX,M,W,Lawrence Kindel,33,V
+February 2, 2016,PA,M,I,Joseph Molinaro,34,G
+February 2, 2016,CA,M,W,Justin Prescott,30,G
+February 2, 2016,NM,M,L,Edgar Rene Alvarado,21,G
+February 1, 2016,DC,M,B,Peter John,36,G
+February 1, 2016,FL,M,L,Juan A. Ruiz,46,G
+January,,,Unknown,,Unknown,
+January 31, 2016,CA,M,W,Jeffry Graves,62,G
+January 31, 2016,PA,M,B,Bruce Kelley Jr.,37,G
+January 31, 2016,IL,M,B,Charles M. Smith,29,G
+January 31, 2016,TX,M,W,Michael Brown,25,G
+January 31, 2016,MO,M,W,Jeremy J. Sinclair,42,G
+January 30, 2016,GA,M,L,Jose Alegre,64,G
+January 29, 2016,AL,F,W,Angela Hiatt,41,G
+January 30, 2016,CO,M,L,Philip B. Salazar,38,G
+January 29, 2016,TX,M,B,Christopher Michael Dew,29,G
+January 29, 2016,MA,M,B,Randolph McClain,33,G
+January 29, 2016,NE,M,W,William A. Adams,33,G
+January 28, 2016,OR,M,B,Christopher Kalonji,19,G
+January 28, 2016,WA,F,I,Jacqueline D. Salyers,32,G
+January 28, 2016,FL,F,L,Jessica Lee Bonilla,24,V
+January 27, 2016,GA,M,L,Israel Vladimir Rodriguez,26,G
+January 27, 2016,NM,M,L,Herman Flores,31,G
+January 27, 2016,MI,F,B,Janet Wilson,31,G
+January 27, 2016,TN,M,A,Thongsavanh Vandarack,40,G
+January 27, 2016,SC,M,W,John Wesley Smith,27,G
+January 27, 2016,TX,M,W,Nathan Bailey,30,G
+January 27, 2016,TN,M,B,Johnathan Bratcher,32,G
+January 27, 2016,AR,M,W,Scott F. Scanlon,52,G
+January 26, 2016,OR,M,W,Robert "LaVoy" Finicum,55,G
+January 26, 2016,KS,M,W,Scott A. Brunson,50,R
+January 25, 2016,CA,M,W,Stephen Schenck,47,G
+January 25, 2016,NV,M,L,Silvio Alvarado-Morales,38,G
+January 23, 2016,AL,M,W,Michael Lamar Robinson,43,G
+January 22, 2016,IN,F,W,Sharon Mitterling,67,V
+January 22, 2016,GA,M,W,Joshua Lee,26,G
+January 21, 2016,NJ,M,W,Jerry Siracusa,44,V
+January 21, 2016,OK,M,B,Cedric Lamont Norris,39,G
+January 21, 2016,AL,M,W,Randy Joe Sanders Jr.,33,G
+January 20, 2016,LA,M,B,Timothy R. Albert,40,G
+January 20, 2016,TX,M,W,Michael Clyde Lynch,37,G
+January 20, 2016,GA,M,W,Jim Bravis Redmond,28,G
+January 19, 2016,CA,M,L,Filiberto Valencia,26,TR
+January 19, 2016,AZ,M,W,Levi Gene Wilson,39,G
+January 19, 2016,NC,M,W,Samuel Grady,55,G
+January 19, 2016,TX,M,W,Gary Wayne Jones,36,G
+January 18, 2016,CA,M,W,Vasilios Alexander Katsouras,29,G
+January 18, 2016,OR,M,W,Timothy Joseph Alex Caruthers,27,G
+January 18, 2016,FL,M,W,Eric Provost,28,G
+January 18, 2016,AZ,M,W,Jordan Szymanski,33,G
+January 17, 2016,AZ,M,W,Daniel Shaver,26,G
+January 17, 2016,CA,M,L,Efrain Herrera Jr.,24,G
+January 17, 2016,MO,M,B,Crayton West,52,G
+January 17, 2016,TX,M,W,Ashton Lane Morris,27,G
+January 17, 2016,WV,M,W,Clarence Layfield,55,G
+January 17, 2016,AL,M,W,Joshua Tate Fielding,38,G
+January 17, 2016,UT,M,W,Cory Lee Henderson,31,G
+January 16, 2016,TN,M,W,Brandon David Bearden,29,G
+January 16, 2016,CA,M,L,Alfred Longoria,34,G
+January 16, 2016,OR,M,W,Adam Karjalainen,44,G
+January 16, 2016,CA,F,W,Kelsey Rose Hauser,25,G
+January 16, 2016,FL,M,B,Henry Bennett,19,G
+January 16, 2016,WV,M,W,William Keith Waldron,26,G
+January 15, 2016,MI,M,B,Rakeem O. Bentley,24,G
+January 14, 2016,CA,M,L,Miguel Hernandez,39,G
+January 14, 2016,IL,M,W,Willie Holderfield,41,G
+January 13, 2016,WA,M,W,Timothy Bernard Meehan,60,G
+January 12, 2016,VA,M,W,Keith Richardson,58,G
+January 12, 2016,AK,M,I,Herman Bean Jr.,49,G
+January 12, 2016,CO,M,W,Ramone Lonergan,32,G
+January 11, 2016,KY,F,B,Gynnya McMillen,16,R
+January 11, 2016,PA,F,W,Ciara Meyer,12,G
+January 11, 2016,OH,M,W,Robert Tenbrink,45,G
+January 11, 2016,CA,M,W,Alan Paul Bartley,56,G
+January 10, 2016,MD,F,W,Christine A. Lucas,45,G
+January 10, 2016,WA,M,W,David Jay Kent,37,G
+January 9, 2016,TX,M,Unknown,Lance Light,54,G
+January 9, 2016,DE,M,B,Lionel Waters,35,TR
+January 9, 2016,VI,M,B,Avery Charlery	,Unknown,G
+January 9, 2016,GA,M,W,Andrew Earl Abernathy,50,G
+January 8, 2016,CO,M,W,Dana Bruce Ott,63,G
+January 8, 2016,WI,M,W,Eric C. Olsen,26,G
+January 7, 2016,MA,M,Unknown,Samuel Dunn,29,R
+January 7, 2016,KY,M,W,Kenneth Clay,34,G
+January 7, 2016,NM,M,L,Alan Huberth Franco-Armenta,32,G
+January 6, 2016,IL,M,W,Charles J. Hollstein,38,G
+January 5, 2016,CA,M,L,Albert Thompson,28,G
+January 5, 2016,CA,M,W,Stephen John Bukwich,52,G
+January 5, 2016,TN,M,W,James K. Maher,39,G
+January 5, 2016,WA,M,W,Joel Anthony Nelson,29,G
+January 5, 2016,PA,M,W,David Zollo,54,G
+January 5, 2016,NC,M,B,Carlton Antonio Murphy,33,G
+January 4, 2016,LA,M,B,Eric John Senegal,27,G
+January 3, 2016,OK,M,B,Rodney Turner,22,G
+January 3, 2016,NC,M,B,Germonta Wallace,30,G
+January 2, 2016,MT,M,W,Sean O'Brien,37,G
+January 2, 2016,SD,M,W,Lonnie Haskell Powers,37,G
+January 2, 2016,CA,M,W,Joshua Adam Sisson,30,G
+January 1, 2016,ID,M,L,Gilberto Heredia,38,G
