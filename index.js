@@ -8,8 +8,8 @@ var nodemailer     = require('nodemailer');
 var mongoose       = require('mongoose');
 var csurf          = require('csurf');
 var cookieParser   = require('cookie-parser'); 
-//var $ = jQuery = require('jquery');
-//require('./public/js/jquery.csv.js');
+var parse          = require("csv-parse/lib/sync");
+
 
 var Blog         = require('./models/blogs.js');
 var app = express();
@@ -19,12 +19,9 @@ var hbsConfig = { layoutsDir: app.get('views') + "/layouts", defaultLayout: 'mai
 var handlebars = require('express-handlebars')(hbsConfig);
 
 // Get our data for mass murder statistics
-/*
-var murder_data_path = './public/csv/mass_shootings.csv';
-var murder_data_str = fs.readFileSync(murder_data_path, 'UTF-8');
-var data = $.csv.toObjects(murder_data_str);
-console.log(data);
-*/
+var killedByPoliceCsv = "public/csv/killed_by_police.csv";
+var killedByPoliceDataStr = fs.readFileSync(killedByPoliceCsv, "UTF-8");
+var data = parse(killedByPoliceDataStr, {columns: true, quote: "|"});
 
 // Configure our MongoDB Connection
 var opts = {

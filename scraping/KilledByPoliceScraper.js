@@ -11,6 +11,7 @@ var checkUnknown = function(field) {
 
 var formatDate = function(date) {
     date = date.replace(/ *\([^)]*\) */g, "");
+    date = date.replace(",", "");
     return date;
 };
 
