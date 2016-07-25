@@ -127,6 +127,12 @@ var doodadsPage = function(req, res) {
 };
 app.get('/doodads', doodadsPage);
 
+// Create a page for police killing visualizations
+var killedByPolicePage = function(req, res) {
+    res.render('killed_by_police', data);
+};
+app.get('/killed_by_police', killedByPolicePage);
+
 // Create a page for the mass shooting map
 var massShootingMapPage = function(req, res) {
     res.render("mass_shooting_map", data);
