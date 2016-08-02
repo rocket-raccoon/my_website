@@ -15,7 +15,15 @@ var Blog         = require('./models/blogs.js');
 var app = express();
 app.set('views', __dirname + '/views');
 
-var hbsConfig = { layoutsDir: app.get('views') + "/layouts", defaultLayout: 'main'}
+var hbsConfig = {
+    layoutsDir: app.get('views') + "/layouts",
+    defaultLayout: 'main',
+    helpers: {
+        static: function(name) {
+            return require('./lib/static.js').map(name);
+        }
+    }
+};
 var handlebars = require('express-handlebars')(hbsConfig);
 
 // Get our data for mass murder statistics
