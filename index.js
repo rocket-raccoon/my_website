@@ -24,7 +24,7 @@ var hbsConfig = {
         }
     }
 };
-var handlebars = require('express-handlebars')(hbsConfig);
+var handlebars = require('express-handlebars').create(hbsConfig);
 
 // Get our data for mass murder statistics
 /*
@@ -55,7 +55,7 @@ switch(app.get('env')) {
 var port = 3000;
 app.set('port', process.env.PORT || port);
 
-app.engine('handlebars', handlebars);
+app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 var static_path = __dirname + '/public';
@@ -110,15 +110,14 @@ app.post('/contact', contactPagePost);
 // Create a blogs page
 var blogsPage = function(req, res) {
     Blog.find().sort([['date', 'descending']]).exec(function(err, blogs) {
-        var context = {
-            blogs: blogs,
-        };
+        var context = { blogs: blogs };
         res.render('blogs', context);
     });
 };
 app.get('/blogs', blogsPage);
 
 // Create an individual blogs page
+var singleBlogPageHtml = String(fs.readFileSync('views/single_blog.handlebars'));
 var individualBlogPage = function(req, res) {
     var blogId = req.params.blogId;
     Blog.findOne({_id: blogId}, function(err, blog) {
@@ -127,7 +126,15 @@ var individualBlogPage = function(req, res) {
             date: blog.date,
             text: blog.text
         };
-        res.render('single_blog', context);
+        // Have to double compile unfortunately :(
+        var html = handlebars.handlebars.compile(singleBlogPageHtml)(context);
+        var static_context = {static: handlebars.helpers.static};
+        html = handlebars.handlebars.compile(html)(static_context);
+        var main_context = {
+            body: html,
+            layout: false
+        };
+        res.render('layouts/main', main_context);
     });
 }
 app.get('/blogs/:blogId', individualBlogPage);
