@@ -4,6 +4,7 @@
   "description": "My personal website where I write about random things in blog posts, talk about my life, and have general contact information.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alberto Tristan Benavides",
