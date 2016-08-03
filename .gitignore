@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 *.swp
 .gitignore
+.elasticbeanstalk/
 credentials.js
 fixtures
 seed_blog_data.js
