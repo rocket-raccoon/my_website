@@ -6,3 +6,8 @@ node_modules
 credentials.js
 fixtures
 seed_blog_data.js
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
