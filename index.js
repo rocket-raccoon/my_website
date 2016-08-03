@@ -117,7 +117,7 @@ var blogsPage = function(req, res) {
 app.get('/blogs', blogsPage);
 
 // Create an individual blogs page
-var singleBlogPageHtml = String(fs.readFileSync('views/single_blog.handlebars'));
+var singleBlogPageHtml = String(fs.readFileSync(__dirname + '/views/single_blog.handlebars'));
 var individualBlogPage = function(req, res) {
     var blogId = req.params.blogId;
     Blog.findOne({_id: blogId}, function(err, blog) {
