@@ -1,1 +1,57 @@
-<h1>404 - Page Not Found</h1>
+<style>
+    #message {
+        display: table;
+    }
+</style>
+
+<h1 id="message">404 - Page Not Found</h1>
+
+<script>
+
+var message = document.getElementById('message');
+
+var getRandomCoordinate = function() {
+    var x = Math.random() * ($(window).width() - $('#message').width());
+    var y = Math.random() * ($(window).height() - $('#message').height());
+    return 'translate(' + x + 'px, ' + y + 'px)';
+};
+
+var getRandomColor = function() {
+    var r = Math.round(Math.random() * 255);
+    var g = Math.round(Math.random() * 255);
+    var b = Math.round(Math.random() * 255);
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+};
+
+var getTranslationEffects = function() {
+    return [
+        { transform: getRandomCoordinate() },
+        { transform: getRandomCoordinate() }
+    ];
+};
+
+var getColorEffects = function() {
+    return [
+        { color: getRandomColor() },
+        { color: getRandomColor() }
+    ];
+};
+
+var animateMessage = function() {
+    message.animate(getTranslationEffects(), timings);                                                                                             
+    message.animate(getColorEffects(), timings);
+};
+
+var timings = {
+    duration: 1000,
+    easing: 'ease-in-out',
+    delay: 0,
+    iterations: Infinity,
+    direction: 'alternate',
+    fill: 'forwards'
+};
+
+animateMessage();
+setInterval(animateMessage, 3000);
+
+</script>
