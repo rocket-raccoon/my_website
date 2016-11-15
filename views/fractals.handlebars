@@ -1,0 +1,61 @@
+<style>
+#fractal {
+    border: solid 1px red;
+}
+</style>
+
+<canvas id="fractal" height="200" width="200"></canvas>
+
+<script>
+
+var canvas = document.getElementById('fractal');
+var ctx = canvas.getContext('2d');
+
+var multiplyComplexNumbers = function(x1, y1, x2, y2) {
+    a = x1 * x2;
+    b = x1 * y2;
+    c = y1 * x2;
+    d = y1 * y2;
+    return [a - d, b + c];
+};
+
+var radius = function(x, y) {
+    return Math.sqrt((x * x) + (y * y));
+};
+
+var plotFractal = function() {
+    var epsilon = 0.01;
+    var maxIterations = 20;
+    for (var x = -2; x <= 2; x += epsilon) {
+        for (var y = -2; y <= 2; y += epsilon) {
+            var iterations = 0;
+            var c1 = x;
+            var c2 = y;
+            var z1 = 0;
+            var z2 = 0;
+            while (iterations <= maxIterations && radius(z1, z2) < 2) {
+                var newComplexNumber = multiplyComplexNumbers(z1,z2,z1,z2);
+                z1 = newComplexNumber[0] + c1;
+                z2 = newComplexNumber[1] + c2;
+                iterations++;
+            };
+            var a = ((x + 2) / 4) * 200;
+            var b = ((y + 2) / 4) * 200;
+            ctx.fillStyle = "rgb(" + radius(z1,z2) * 255.0 + ",0,0)";
+            if (radius(z1,z2) < 2) {
+                ctx.fillRect(a,b,1,1);
+            } else {
+                ctx.clearRect(a,b,1,1);
+            };
+        }
+    }
+};
+
+plotFractal();
+
+</script>
+
+
+
+
+
