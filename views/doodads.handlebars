@@ -1,3 +1,47 @@
-<p>
-This is where I will be putting all my doodads.  Doodads are basically things I will define as mini apps or things that aren't mainly writing and involve some coding component.
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h1>Doodads</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item">
+    <a href="doodads/election2016">
+    <div class="content_square">
+      <img src="{{{static image}}}"></img>
+      <h4>Nadered</h4>
+    </div>
+    </a>
+  </div>
+</div>
+
+<script>
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+    });
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+  		$grid.masonry('layout');
+	});
+</script>
+
+<script>
+  $(".grid-item")
+  .mouseover(function() {
+    $(this).css("background-color", "#2874A6");
+  })
+  .mouseout(function() {
+    $(this).css("background-color", "#D6EAF8");
+  });
+</script>
+
+
+
+

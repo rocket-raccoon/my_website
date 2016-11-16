@@ -145,11 +145,23 @@ var doodadsPage = function(req, res) {
 };
 app.get('/doodads', doodadsPage);
 
+// Create a page for fractals
+var fractalsPage = function(req, res) {
+    res.render("fractals");
+};
+app.get("/fractals", fractalsPage);
+
 // Create a page for the mass shooting map
 var massShootingMapPage = function(req, res) {
     res.render("mass_shooting_map", data);
 };
 app.get('/mass_shooting_map', massShootingMapPage);
+
+// Create a page for 3rd party election 2016 visualizations
+var election2016Page = function(req, res) {
+    res.render("election_2016");
+};
+app.get('/doodads/election2016', election2016Page);
 
 // Create 404 page
 var page404 = function(req, res) {

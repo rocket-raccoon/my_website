@@ -1,0 +1,377 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h1>Getting Nadered</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+<div class="text_section">
+<p>
+Like many of my fellow millennials living in highly liberal and insulated metropolitan areas, I was left in shock and awe at the outcome of the presidential election.  How could the polls be so absurdly off?  In fact, just two weeks prior, Nate Silver of fivethirtyeight.com fame pegged Hilary Clinton as a <a href="http://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo">nearly 7 to 1 odds favorite</a> to win the election.  You can smoke a pack of cigarettes a day as a dude and your chances of getting lung cancer would still be <a href="https://www.verywell.com/what-percentage-of-smokers-get-lung-cancer-2248868">lower</a> than Hillary’s chances of losing this election.
+</p>
+<p>
+What was supposed to be the perfunctory coronation of Hillary Clinton as the first female president of the United States quickly morphed into a period of intense self reflection and wonderment about the vastly different peoples that call this country home.  We experience life through the narrowest of straws, namely our own existence, and that comes with all sorts of biases that leave us blind to the sometimes very different vantage points others may have.  Where some of us saw a very clearly bigoted and uniquely unqualified demagogue, others saw a charismatic outsider ready to tear down the elitist institutions of this nation and restore the olden days of an America gone by.  A great irony considering the outsider in question here is a billionaire white male from the most iconically capitalistic and gilted city in the world.
+</p>
+<p>
+Much like Brexit, this was a protest election.  People we’re dissatisfied with both candidates to such a large degree that I think rationality was left in the rearview mirror in favor of lashing back at the establishment, however that took shape.
+</p>
+<p>
+There’s perhaps no bigger example of this in my mind than those people that chose to vote third-party in what was arguably the most critical election of the modern era.  I get quite a chuckle to imagine that on election day there were people in this country who either woke up early to get to the polls before work, took time out of their work day, or braved long lines after work to literally waste their singular civic voice on a candidate with a zero percent chance of winning.
+</p>
+<p>
+I get it.  The electoral college is an antiquated, white-gloved, Southern slap to the face of modern democracy.  The two party system is like an awful one-size-fit-all cap that doesn’t fit your head and leaves a red ring, book-ended by hippies on the left and religious whackjobs on the right.  Hillary Clinton can’t use email properly and would probably be the last person you’d want to take jager bombs with. Yada yada.
+</p>
+<p>
+But voting third party is reckless.  The system needs to be changed, yes, but voting third party in the system as it currently exists merely worked in Trump’s favor.  Voting third party is like going to a steakhouse and ordering a salad.  Yeah, you can technically order that but it will be far from filling and leave you wishing you had gotten ribs or steak instead or had not even gone at all because steakhouse salads suck.
+</p>
+<p>
+I was, in particular, interested to see if Hillary Clinton got Ralph Nader-ed this election.  So here’s what I did.  I scraped together the latest 2016 election results data for each state from <a href="http://www.bloomberg.com/graphics/2016-election-results/">Bloomberg</a>.  It may be slightly different than the final election data since they are not technically done with the counting and it’s like 99 point something percent finished, but it will do.  Then I threw it into the D3 visualization below and added two sliders: one for Jill Stein and one for Gary Johnson.  These sliders basically show what would have happened if Stein or Johnson supporters had instead cast their vote for Hillary under the simplifying assumption that the distributional changes are similar across the states.
+</p>
+</div>
+<br/>
+
+<div class="electoral_counter">
+  <span>Hilary Clinton: <span id="clinton_electoral">0</span></span>
+  <span>Donald Trump: <span id="trump_electoral">0</span></span>
+</div>
+
+<style type="text/css">
+
+/* Set electoral vote counter colors */
+span#clinton_electoral {
+    color: blue;
+    margin: 1em;
+}
+span#trump_electoral {
+    color: red;
+    margin: 1em;
+}
+div.electoral_counter {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+}
+div.sliders {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.sliders input {
+    width: 20em;
+    float: left;
+}
+
+.candidate_slider {
+    margin: 1em;
+    float: left;
+}
+
+svg {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+    fill-opacity: .7;
+}
+
+/* Style for Custom Tooltip */
+div.tooltip {   
+    display: table;
+    position: absolute;           
+    text-align: center;           
+    padding: 2px;             
+    font: 12px sans-serif;        
+    background: white;   
+    border: 1px solid black;      
+    border-radius: 8px;           
+    pointer-events: none;         
+}
+        
+/* Legend Font Style */
+body {
+    font: 11px sans-serif;
+}
+        
+/* Legend Position Style */
+.legend {
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+    /*
+
+    This visualization was made possible by modifying code provided by:
+
+    Scott Murray, Choropleth example from "Interactive Data Visualization for the Web" 
+    https://github.com/alignedleft/d3-book/blob/master/chapter_12/05_choropleth.html   
+            
+    Malcolm Maclean, tooltips example tutorial
+    http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
+
+    Mike Bostock, Pie Chart Legend
+    http://bl.ocks.org/mbostock/3888852
+
+    */
+
+    var percent = function(numerator, denominator) {
+        return (100 * numerator / denominator).toFixed(1);
+    };
+           
+    //Width and height of map
+    var width = 960;
+    var height = 500;
+
+    // D3 Projection
+    var projection = d3.geo.albersUsa()
+                       .translate([width/2, height/2])    // translate to center of screen
+                       .scale([1000]);          // scale things down so see entire US
+
+    // Define path generator
+    var path = d3.geo.path()               // path generator that will convert GeoJSON to SVG paths
+                 .projection(projection);  // tell path generator to use albersUsa projection
+          
+    // Define linear scale for output
+    var color = d3.scale
+                  .linear()
+                  .domain([-80, 0, 80])
+                  .range(["blue", "white", "red"])
+
+    var legendText = ["Democrat", "Republican"];
+
+    //Create SVG element and append map to the SVG
+    var svg = d3.select("body")
+                .append("svg")
+                .attr("class", "us_map")
+                .attr("width", width)
+                .attr("height", height);
+           
+    // Append Div for tooltip to SVG
+    var div = d3.select("body")
+                .append("div")   
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+    var recalculateVotes = function(steinDefectRate, johnsonDefectRate) {
+
+        // Load in election results data
+        d3.csv("{{static '/csv/Election2016.csv'}}", function(data) {
+            
+            // Load GeoJSON data and merge with states data
+            d3.json("{{static '/json/us-states.json'}}", function(json) {
+
+                // Set the electoral votes counters
+                var clintonElectoral = _.reduce(data, function(memo, d) {
+                    var johnsonVotes = parseInt(d.johnson);
+                    var steinVotes = parseInt(d.stein);
+                    var hilaryVotes = parseInt(d.clinton) + steinDefectRate * steinVotes + johnsonDefectRate * johnsonVotes;
+                    var trumpVotes = parseInt(d.trump);
+                    if (hilaryVotes > trumpVotes) {
+                        return parseInt(d.votes) + memo;
+                    } else {
+                        return memo;
+                    }
+                }, 0);
+                var trumpElectoral = _.reduce(data, function(memo, d) {
+                    var johnsonVotes = parseInt(d.johnson);
+                    var steinVotes = parseInt(d.stein);
+                    var hilaryVotes = parseInt(d.clinton) + steinDefectRate * steinVotes + johnsonDefectRate * johnsonVotes;
+                    var trumpVotes = parseInt(d.trump);
+                    if (hilaryVotes < trumpVotes) {
+                        return parseInt(d.votes) + memo;
+                    } else {
+                        return memo;
+                    }
+                }, 0);
+                document.getElementById("trump_electoral").innerHTML = trumpElectoral;
+                document.getElementById("clinton_electoral").innerHTML = clintonElectoral;
+
+                // Loop through each state data value in the .csv file
+                for (var i = 0; i < data.length; i++) {
+
+                    // Grab State Name
+                    var dataState = data[i].state;
+
+                    // Grab vote counts
+                    var hilaryVotes = parseInt(data[i].clinton);
+                    var trumpVotes = parseInt(data[i].trump);
+                    var johnsonVotes = parseInt(data[i].johnson);
+                    var steinVotes = parseInt(data[i].stein);
+                    var totalVotes = hilaryVotes + trumpVotes + steinVotes + johnsonVotes;
+                    
+                    // Adjust vote counts by defection rates
+                    hilaryVotes += johnsonDefectRate * johnsonVotes + steinDefectRate * steinDefectRate;
+                    johnsonVotes = (1 - johnsonDefectRate) * johnsonVotes;
+                    steinVotes = (1 - steinDefectRate) * steinVotes;
+
+                    // Get percentages
+                    var hilaryPerc = percent(hilaryVotes, totalVotes);
+                    var trumpPerc = percent(trumpVotes, totalVotes);
+                    var steinPerc = percent(steinVotes, totalVotes);
+                    var johnsonPerc = percent(johnsonVotes, totalVotes);
+                    var dataValue = trumpPerc - hilaryPerc;
+                    if (dataValue < 0) {
+                        dataValue = Math.min(dataValue, -10);
+                    } else {
+                        dataValue = Math.max(dataValue, 10);
+                    }
+
+                    // Find the corresponding state inside the GeoJSON
+                    for (var j = 0; j < json.features.length; j++)  {
+                        var jsonState = json.features[j].properties.name;
+                        if (dataState == jsonState) {
+                            // Copy the data value into the JSON
+                            var properties = json.features[j].properties;
+                            properties.hilaryVotes = hilaryVotes;
+                            properties.hilaryPerc = hilaryPerc;
+                            properties.trumpVotes = trumpVotes;
+                            properties.trumpPerc = trumpPerc;
+                            properties.steinVotes = steinVotes;
+                            properties.steinPerc = steinPerc;
+                            properties.johnsonVotes = johnsonVotes;
+                            properties.johnsonPerc = johnsonPerc;
+                            properties.visited = dataValue; 
+                            // Stop looking through the JSON
+                            break;
+                        }
+                    }
+                }
+              
+                // Unbind any old data
+                var items = svg.selectAll("path").data(json.features);
+                items.enter().append("path");
+                items.exit().remove();
+                    
+                // Bind new data
+                items.attr("d", path)
+                    .style("stroke", "#fff")
+                    .style("stroke-width", "1")
+                    .style("fill", function(d) {
+                        var value = d.properties.visited;
+                        if (value != null) {
+                            return color(value);
+                        } else {
+                            return "rgb(213,222,217)";
+                        }
+                    })
+                    .on("mouseover", function(d) {
+                        var dProps = d.properties;
+                        div.transition()        
+                           .duration(200)      
+                           .style("opacity", .9);
+                        var html = "<b>" + dProps.name + "</b><br/>";
+                        html += "Clinton: " + dProps.hilaryVotes + " (" + dProps.hilaryPerc + "%)<br/>";
+                        html += "Trump: " + dProps.trumpVotes + " (" + dProps.trumpPerc + "%)<br/>";
+                        html += "Johnson: " + dProps.johnsonVotes + " (" + dProps.johnsonPerc + "%)<br/>";
+                        html += "Stein: " + dProps.steinVotes + " (" + dProps.steinPerc + "%)<br/>";
+                        html += "Harambe: 0 (0%)<br/>"
+                        div.html(html)  
+                           .style("left", (d3.event.pageX) + "px")     
+                           .style("top", (d3.event.pageY - 28) + "px");    
+                    })                  
+                    .on("mouseout", function(d) {       
+                        div.transition()        
+                           .duration(500)      
+                           .style("opacity", 0);   
+                    });
+
+            });
+        });
+    };   
+
+    recalculateVotes(0, 0);
+
+    // Modified Legend Code from Mike Bostock: http://bl.ocks.org/mbostock/3888852
+    var legend = d3.select(".us_map")
+                   .append("svg")
+                   .attr("class", "legend")
+                   .attr("width", 140)
+                   .attr("height", 200)
+                   .attr("bottom", 0)
+                   .attr("right", 100)
+                   .attr("border-width", "1px")
+                   .selectAll("g")
+                   .data([-80,80])
+                   .enter()
+                   .append("g")
+                   .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+    legend.append("rect")
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", color);
+
+    legend.append("text")
+          .data(legendText)
+          .attr("x", 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .text(function(d) { return d; });
+
+</script>
+
+</div>
+</div>
+</div>
+
+<div class="sliders">
+  <div class="candidate_slider">
+    <h1>Jill Stein</h1>
+    <input type="range" id="stein_slider" value="0">
+  </div>
+  <div class="candidate_slider">
+    <h1>Gary Johnson</h1>
+    <input type="range" id="johnson_slider" value="0">
+  </div>
+</div>
+<br/>
+
+<script>
+
+    var recalculateElectoralVotes = function() {
+        var steinDefectionRate = $("#stein_slider").val() / 100;
+        var johnsonDefectionRate = $("#johnson_slider").val() / 100;
+        recalculateVotes(steinDefectionRate, johnsonDefectionRate);
+    };
+
+    $("#johnson_slider").on("change", recalculateElectoralVotes);
+    $("#stein_slider").on("change", recalculateElectoralVotes);
+
+</script>
+
+</div>
+</div>
+</div>
+
+<div class="container-fluid">                                                                                                                 
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<div class="text_section">
+  <p>
+What do we see?  We see that if half of the Gary Johnson supporters would have instead voted Hillary, Hillary would have won 279-259.  Alternatively, if every Jill Stein supporter would have switched to Hillary and just 15% of Gary Johnson supporters had a change of heart then Hilary also would have won by that same margin.
+  </p>
+  <p>
+Now, I don’t know the specifics of what causes someone to vote for either Jill Stein or Gary Johnson myself, but I am going to take a wild stab in the dark and guess that most people in those camps would have, gun to their head, preferred Clinton over Trump.  4 out of 5 Gary Johnson supporters are probably disgruntled Bernie fans who were razzed to hear that Gary supports weed legalization.  The other 1 out of 5 are actual Libertarians.  5 out of 5 Jill Stein supporters are probably-vegan liberals trying to be edgy who would never dare vote Trump otherwise.  I just made these statistics up, but it’s probably not too much worse than how the polls this election cycle have fared.
+  </p>
+  <p>
+Other stalwart third party candidates that people chose to give their vote to this go ‘round include:
+  </p>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Vermin_Supreme">A guy that wants to prioritize time travel research and give everyone a pony.</a></li>
+    <li><a href="http://www.expressnews.com/news/news_columnists/gilbert_garcia/article/Former-male-stripper-shimmies-into-mayoral-race-6060146.php">A former male, exotic stripper from Texas</a>
+    <li><a href="https://en.wikipedia.org/wiki/Deez_Nuts_(politician)">A satirical character called “Deez Nuts”</a>
+  </ul>
+</div>
+    </div>
+  </div>
+</div>
