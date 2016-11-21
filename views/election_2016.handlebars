@@ -14,22 +14,22 @@
 Like many of my fellow millennials living in highly liberal and insulated metropolitan areas, I was left in shock and awe at the outcome of the presidential election.  How could the polls be so absurdly off?  In fact, just two weeks prior, Nate Silver of fivethirtyeight.com fame pegged Hilary Clinton as a <a href="http://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo">nearly 7 to 1 odds favorite</a> to win the election.  You can smoke a pack of cigarettes a day as a dude and your chances of getting lung cancer would still be <a href="https://www.verywell.com/what-percentage-of-smokers-get-lung-cancer-2248868">lower</a> than Hillary’s chances of losing this election.
 </p>
 <p>
-What was supposed to be the perfunctory coronation of Hillary Clinton as the first female president of the United States quickly morphed into a period of intense self reflection and wonderment about the vastly different peoples that call this country home.  We experience life through the narrowest of straws, namely our own existence, and that comes with all sorts of biases that leave us blind to the sometimes very different vantage points others may have.  Where some of us saw a very clearly bigoted and uniquely unqualified demagogue, others saw a charismatic outsider ready to tear down the elitist institutions of this nation and restore the olden days of an America gone by.  A great irony considering the outsider in question here is a billionaire white male from the most iconically capitalistic and gilted city in the world.
+What was supposed to be the perfunctory coronation of Hillary Clinton as the first female president of the United States quickly morphed into a period of intense self reflection and wonderment about the vastly different peoples that call this country home.  We imbibe life through the narrowest of straws, namely our own existence, and that comes with all sorts of biases that leave us blind to the sometimes very different vantage points others may have.  Where some of us saw a bigoted and uniquely unqualified demagogue, others saw a charismatic outsider ready to tear down the elitist institutions of this nation and restore the olden days of an America long gone.  A great irony considering the outsider in question here is a billionaire white male from the most iconically capitalistic and gilted city in the world.
 </p>
 <p>
-Much like Brexit, this was a protest election.  People we’re dissatisfied with both candidates to such a large degree that I think rationality was left in the rearview mirror in favor of lashing back at the establishment, however that took shape.
+Much like the Brexit situation across the Atlantic, this was a protest election.  People were dissatisfied with both candidates to such a large degree that I think rationality was left in the rearview mirror in favor of lashing back at the establishment, however that took shape.
 </p>
 <p>
 There’s perhaps no bigger example of this in my mind than those people that chose to vote third-party in what was arguably the most critical election of the modern era.  I get quite a chuckle to imagine that on election day there were people in this country who either woke up early to get to the polls before work, took time out of their work day, or braved long lines after work to literally waste their singular civic voice on a candidate with a zero percent chance of winning.
 </p>
 <p>
-I get it.  The electoral college is an antiquated, white-gloved, Southern slap to the face of modern democracy.  The two party system is like an awful one-size-fit-all cap that doesn’t fit your head and leaves a red ring, book-ended by hippies on the left and religious whackjobs on the right.  Hillary Clinton can’t use email properly and would probably be the last person you’d want to take jager bombs with. Yada yada.
+I get it.  The electoral college is an antiquated, white-gloved, Southern slap to the face of modern democracy.  The two party system is like an awful one-size-fit-all cap that doesn’t quite fit your head, book-ended by hippies on the left and religious whackjobs on the right.  Hillary Clinton can’t use email properly and would probably be the last person you’d want to take jager bombs with. Yada yada.
 </p>
 <p>
 But voting third party is reckless.  The system needs to be changed, yes, but voting third party in the system as it currently exists merely worked in Trump’s favor.  Voting third party is like going to a steakhouse and ordering a salad.  Yeah, you can technically order that but it will be far from filling and leave you wishing you had gotten ribs or steak instead or had not even gone at all because steakhouse salads suck.
 </p>
 <p>
-I was, in particular, interested to see if Hillary Clinton got Ralph Nader-ed this election.  So here’s what I did.  I scraped together the latest 2016 election results data for each state from <a href="http://www.bloomberg.com/graphics/2016-election-results/">Bloomberg</a>.  It may be slightly different than the final election data since they are not technically done with the counting and it’s like 99 point something percent finished, but it will do.  Then I threw it into the D3 visualization below and added two sliders: one for Jill Stein and one for Gary Johnson.  These sliders basically show what would have happened if Stein or Johnson supporters had instead cast their vote for Hillary under the simplifying assumption that the distributional changes are similar across the states.
+I was, in particular, interested to see if Hillary Clinton got Ralph Nader-ed this election.  So here’s what I did.  I scraped together the latest 2016 election results data for each state from <a href="http://www.bloomberg.com/graphics/2016-election-results/">Bloomberg</a>.  It may be slightly different than the final election data since they are not technically done with the counting and it’s like 99 point something percent finished, but it will do.  Then I threw it into the D3 visualization below and added two sliders: one for Jill Stein and one for Gary Johnson.  These sliders basically show what would have happened if Stein or Johnson supporters had instead cast their vote for Hillary under the simplifying assumption that the distributional changes are similar across the states.  In other words, if 10% of Stein voters instead vote for Hilary, we assume that 10% is constant across every single state under our little simulation here.
 </p>
 </div>
 <br/>
@@ -165,11 +165,9 @@ body {
     var recalculateVotes = function(steinDefectRate, johnsonDefectRate) {
 
         // Load in election results data
-        d3.csv("{{static '/csv/Election2016.csv'}}", function(data) {
-            
+        d3.csv("/csv/Election2016.csv", function(data) {
             // Load GeoJSON data and merge with states data
-            d3.json("{{static '/json/us-states.json'}}", function(json) {
-
+            d3.json("/json/us-states.json", function(json) {
                 // Set the electoral votes counters
                 var clintonElectoral = _.reduce(data, function(memo, d) {
                     var johnsonVotes = parseInt(d.johnson);
@@ -211,8 +209,8 @@ body {
                     
                     // Adjust vote counts by defection rates
                     hilaryVotes += johnsonDefectRate * johnsonVotes + steinDefectRate * steinDefectRate;
-                    johnsonVotes = (1 - johnsonDefectRate) * johnsonVotes;
-                    steinVotes = (1 - steinDefectRate) * steinVotes;
+                    johnsonVotes = Math.round((1 - johnsonDefectRate) * johnsonVotes);
+                    steinVotes = Math.round((1 - steinDefectRate) * steinVotes);
 
                     // Get percentages
                     var hilaryPerc = percent(hilaryVotes, totalVotes);
@@ -358,10 +356,10 @@ body {
     <div class="col-md-8 col-md-offset-2">
 <div class="text_section">
   <p>
-What do we see?  We see that if half of the Gary Johnson supporters would have instead voted Hillary, Hillary would have won 279-259.  Alternatively, if every Jill Stein supporter would have switched to Hillary and just 15% of Gary Johnson supporters had a change of heart then Hilary also would have won by that same margin.
+What do we see?  We see that if half of the Gary Johnson supporters would have instead cast their ballots for Hillary, Hillary would have won the electoral college 279-259.  Alternatively, if every Jill Stein supporter would have switched to Hillary and a mere 15% of Gary Johnson supporters had a change of heart, then Hilary also would have won by that same margin of victory.
   </p>
   <p>
-Now, I don’t know the specifics of what causes someone to vote for either Jill Stein or Gary Johnson myself, but I am going to take a wild stab in the dark and guess that most people in those camps would have, gun to their head, preferred Clinton over Trump.  4 out of 5 Gary Johnson supporters are probably disgruntled Bernie fans who were razzed to hear that Gary supports weed legalization.  The other 1 out of 5 are actual Libertarians.  5 out of 5 Jill Stein supporters are probably-vegan liberals trying to be edgy who would never dare vote Trump otherwise.  I just made these statistics up, but it’s probably not too much worse than how the polls this election cycle have fared.
+Now, I don’t know the specifics of what causes someone to vote for either Jill Stein or Gary Johnson.  I am going to take a leap of faith here and guess that most people in these camps would have voted Clinton over Trump if forced to pick at gunpoint.  4 out of 5 Gary Johnson supporters are probably disgruntled Bernie fans who were razzed to hear that Gary supports weed legalization.  The other 1 out of 5 are actual Libertarians.  5 out of 5 Jill Stein supporters are probably vegan, college debt laden liberals trying to be edgy who would never dare vote Trump otherwise.  I just made these statistics up, but it’s probably not too much worse than how the polls this election cycle have fared.
   </p>
   <p>
 Other stalwart third party candidates that people chose to give their vote to this go ‘round include:
@@ -371,6 +369,10 @@ Other stalwart third party candidates that people chose to give their vote to th
     <li><a href="http://www.expressnews.com/news/news_columnists/gilbert_garcia/article/Former-male-stripper-shimmies-into-mayoral-race-6060146.php">A former male, exotic stripper from Texas</a>
     <li><a href="https://en.wikipedia.org/wiki/Deez_Nuts_(politician)">A satirical character called “Deez Nuts”</a>
   </ul>
+  <p>
+The electoral college and the way we vote for president is broken, but the way to fix it is not at the presidential election booth itself.  When the electoral dust has settled, no one will care that you were rebellious and voted third party.  It will have been a wasted vote with no meaningful outcome. If we are to remedy this democratic wart, then it needs to be done through Congress. Get involved and show up to vote for local elections. Participate politically yourself. Voting third party in an important election is the absolute wrong way to go about it.
+  </p>
+  <br/>
 </div>
     </div>
   </div>
