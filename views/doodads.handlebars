@@ -14,7 +14,7 @@
     <a href="doodads/election2016">
     <div class="content_square">
       <img src="{{{static '/img/nader.jpg'}}}"></img>
-      <h4>Did Hillary get Nadered?</h4>
+      <div class="grid-item-title">Did Hillary get Nadered?</h4>
     </div>
     </a>
   </div>
@@ -35,13 +35,11 @@
 <script>
   $(".grid-item")
   .mouseover(function() {
-    $(this).css("background-color", "#2874A6");
+    $(".grid-item-title", this).stop().show( "fast", function() {                                                                                                                                     
+        // Animation complete.
+    });
   })
   .mouseout(function() {
-    $(this).css("background-color", "#D6EAF8");
+    $(".grid-item-title", this).hide();
   });
 </script>
-
-
-
-

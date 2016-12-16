@@ -8,6 +8,55 @@
   
   <style>
 
+    @media only screen and (max-width: 500px) {
+ 
+        div.text_section {
+            font-size: 3em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #tristan_blurb {
+           font-size: 0.75em;
+           float: right;
+           right: 0px;
+           margin-top: 1em;
+           margin-right: 1em;
+           display: table;
+           max-width: 20em;
+           background-color: #F4F6F6;
+        }
+
+        #tristan_blurb img {
+            float: left;
+            max-width: 6em;
+            max-height: 6em;
+            margin-left: 1em;
+            margin-top: 1em;
+            margin-right: 1em;
+            z-index: 1;
+        }
+
+        .blurb_text {
+            float: none;
+            margin-left: 1em;
+            margin-top: 1em;
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+        
+        .grid-item-title {
+            display: none;
+            font-size: 0.5em;
+            position: absolute;
+            opacity: 0.85;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            background-color: #D7DBDD;
+        }
+    }
+
     #tristan_blurb {
        float: right;
        right: 0px;
@@ -56,44 +105,7 @@
         padding-bottom: 1em;
         padding-top: 1em;
     }
-
-    @media only screen and (max-width: 500px) {
-        div.text_section {
-            font-size: 3em;
-            padding-top: 1em;
-            padding-bottom: 1em;
-        }
-
-        #tristan_blurb {
-           font-size: 0.75em;
-           float: right;
-           right: 0px;
-           margin-top: 1em;
-           margin-right: 1em;
-           display: table;
-           max-width: 20em;
-           background-color: #F4F6F6;
-        }
-
-        #tristan_blurb img {
-            float: left;
-            max-width: 6em;
-            max-height: 6em;
-            margin-left: 1em;
-            margin-top: 1em;
-            margin-right: 1em;
-            z-index: 1;
-        }
-
-        .blurb_text {
-            float: none;
-            margin-left: 1em;
-            margin-top: 1em;
-            margin-right: 1em;
-            margin-bottom: 1em;
-        }
-    }
-    
+  
     * {
       border: 0px solid black;
     }
@@ -151,14 +163,13 @@
         height: 100%;
     }
     div.content_square {
-        border: 1px solid gray;
-        padding: 10px;
+        position: relative;
+        margin: 10px;
         text-align: center;
         color: black;
         text-decoration: none;
     }
     div.content_square img {
-        margin-bottom: 10px;
         max-width: 100%;
         max-height: 100%;
     }
@@ -176,11 +187,24 @@
     }
     .grid-item {
         float: left;
-        background: #D6EAF8;
-        border: 2px solid #333;
-        border-color: hsla(0, 0%, 0%, 0.5);
-        border-radius: 5px;
+        background: white;
     }
+
+    @media screen and (min-width: 501px) {
+
+    .grid-item-title {
+        display: none;
+        font-size: 2em;
+        position: absolute;
+        opacity: 0.85;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        background-color: #D7DBDD;
+    }
+
+    }
+
   </style>
   <title>Tristan's Personal Website</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
