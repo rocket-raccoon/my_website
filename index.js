@@ -83,11 +83,11 @@ var pageHome = function(req, res) {
 };
 app.get('/', pageHome);
 
-// Create an about page
-var pageAbout = function(req, res) {
-    res.render('about');
+// Create a bio page
+var pageBio = function(req, res) {
+    res.render('bio');
 };
-app.get('/about', pageAbout);
+app.get('/bio', pageBio);
 
 // Create a contact me page
 var contactPage = function(req, res) {
