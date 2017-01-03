@@ -120,7 +120,7 @@ app.get('/blogs', blogsPage);
 var singleBlogPageHtml = String(fs.readFileSync(__dirname + '/views/single_blog.handlebars'));
 var individualBlogPage = function(req, res) {
     var blogId = req.params.blogId;
-    Blog.findOne({'_id': blogId}, function(err, blog) {
+    Blog.findById(blogId, function(err, blog) {
         if (typeof blog === 'undefined') {
             res.send("Could not find any blog post with the id: " + blogId);
         } else {
