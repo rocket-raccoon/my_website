@@ -121,20 +121,24 @@ var singleBlogPageHtml = String(fs.readFileSync(__dirname + '/views/single_blog.
 var individualBlogPage = function(req, res) {
     var blogId = req.params.blogId;
     Blog.findOne({_id: blogId}, function(err, blog) {
-        var context = {
-            title: blog.title,
-            date: blog.date,
-            text: blog.text
-        };
-        // Have to double compile unfortunately :(
-        var html = handlebars.handlebars.compile(singleBlogPageHtml)(context);
-        var static_context = {static: handlebars.helpers.static};
-        html = handlebars.handlebars.compile(html)(static_context);
-        var main_context = {
-            body: html,
-            layout: false
-        };
-        res.render('layouts/main', main_context);
+        if (typeof blog === 'undefined') {
+            res.send("Could not find any blog post with the id: " + blogId);
+        } else {
+            var context = {
+                title: blog.title,
+                date: blog.date,
+                text: blog.text
+            };
+            // Have to double compile unfortunately :(
+            var html = handlebars.handlebars.compile(singleBlogPageHtml)(context);
+            var static_context = {static: handlebars.helpers.static};
+            html = handlebars.handlebars.compile(html)(static_context);
+            var main_context = {
+                body: html,
+                layout: false
+            };
+            res.render('layouts/main', main_context);
+        }
     });
 }
 app.get('/blogs/:blogId', individualBlogPage);
