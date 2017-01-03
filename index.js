@@ -119,7 +119,7 @@ app.get('/blogs', blogsPage);
 // Create an individual blogs page
 var singleBlogPageHtml = String(fs.readFileSync(__dirname + '/views/single_blog.handlebars'));
 var individualBlogPage = function(req, res) {
-    var blogId = req.params.blogId;
+    var blogId =  mongoose.Types.ObjectId(req.params.blogId);
     Blog.findById(blogId, function(err, blog) {
         if (err) {
             res.send(err);
