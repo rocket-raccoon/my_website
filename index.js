@@ -121,7 +121,9 @@ var singleBlogPageHtml = String(fs.readFileSync(__dirname + '/views/single_blog.
 var individualBlogPage = function(req, res) {
     var blogId = req.params.blogId;
     Blog.findById(blogId, function(err, blog) {
-        if (typeof blog === 'undefined') {
+        if (err) {
+            res.send(err);
+        } else if (typeof blog === 'undefined') {
             res.send("Could not find any blog post with the id: " + blogId);
         } else {
             var context = {
