@@ -16,7 +16,7 @@
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.13.0",
-    "mongoose": "^4.4.19",
+    "mongoose": "^4.7.6",
     "nodemailer": "^2.4.1"
   }
 }
