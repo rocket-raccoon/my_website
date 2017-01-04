@@ -124,7 +124,7 @@ var individualBlogPage = function(req, res) {
         if (err) {
             res.send(err);
         } else if (typeof blog === 'undefined' || null === blog) {
-            res.send("Could not find any blog post with the id: " + blogId);
+            res.send("Could not find any blog post with the id: " + "|" + blogId + "|");
         } else {
             var context = {
                 title: blog.title,
